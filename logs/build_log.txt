@@ -8,12 +8,15 @@ Loaded project.mk
 ****************************************************************************
 make -C /home/rhys/msdk/Libraries/FreeRTOS/ lib BUILD_DIR=/home/rhys/freeRTOS78000/build/FreeRTOS
 make[1]: Entering directory '/home/rhys/msdk/Libraries/FreeRTOS'
-- CC Source/list.c
-In file included from Source/list.c:37:
-Source/include/FreeRTOS.h:59:10: fatal error: FreeRTOSConfig.h: No such file or directory
-   59 | #include "FreeRTOSConfig.h"
-      |          ^~~~~~~~~~~~~~~~~~
-compilation terminated.
-make[1]: *** [/home/rhys/msdk/Libraries/CMSIS/Device/Maxim/GCC/gcc.mk:542: /home/rhys/freeRTOS78000/build/FreeRTOS/list.o] Error 1
+make[1]: Nothing to be done for 'lib'.
 make[1]: Leaving directory '/home/rhys/msdk/Libraries/FreeRTOS'
-make: *** [/home/rhys/msdk/Libraries/FreeRTOS/freertos.mk:70: /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a] Error 2
+- LD /home/rhys/freeRTOS78000/build/max78000.elf
+/usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/bin/ld: /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(tasks.o): in function `xTaskCreate':
+/home/rhys/msdk/Libraries/FreeRTOS/Source/tasks.c:763:(.text.xTaskCreate+0x10): undefined reference to `pvPortMallocStack'
+/usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/bin/ld: /home/rhys/msdk/Libraries/FreeRTOS/Source/tasks.c:781:(.text.xTaskCreate+0x58): undefined reference to `vPortFreeStack'
+Memory region         Used Size  Region Size  %age Used
+             ROM:           0 B        64 KB      0.00%
+           FLASH:       42496 B       512 KB      8.11%
+            SRAM:       32228 B       128 KB     24.59%
+collect2: error: ld returned 1 exit status
+make: *** [/home/rhys/msdk/Libraries/CMSIS/Device/Maxim/GCC/gcc.mk:659: /home/rhys/freeRTOS78000/build/max78000.elf] Error 1
