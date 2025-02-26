@@ -8,15 +8,193 @@ Loaded project.mk
 ****************************************************************************
 make -C /home/rhys/msdk/Libraries/FreeRTOS/ lib BUILD_DIR=/home/rhys/freeRTOS78000/build/FreeRTOS
 make[1]: Entering directory '/home/rhys/msdk/Libraries/FreeRTOS'
-make[1]: Nothing to be done for 'lib'.
+- CC Source/list.c
+In file included from Source/include/FreeRTOS.h:59,
+                 from Source/list.c:37:
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:39: warning: "configTASK_NOTIFICATION_ARRAY_ENTRIES" redefined
+   39 | #define configTASK_NOTIFICATION_ARRAY_ENTRIES                       1
+      | 
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:23: note: this is the location of the previous definition
+   23 | #define configTASK_NOTIFICATION_ARRAY_ENTRIES                       0
+      | 
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:40: warning: "configUSE_TASK_NOTIFICATIONS" redefined
+   40 | #define configUSE_TASK_NOTIFICATIONS                                1
+      | 
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:22: note: this is the location of the previous definition
+   22 | #define configUSE_TASK_NOTIFICATIONS                                0
+      | 
+- CC Source/queue.c
+In file included from Source/include/FreeRTOS.h:59,
+                 from Source/queue.c:37:
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:39: warning: "configTASK_NOTIFICATION_ARRAY_ENTRIES" redefined
+   39 | #define configTASK_NOTIFICATION_ARRAY_ENTRIES                       1
+      | 
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:23: note: this is the location of the previous definition
+   23 | #define configTASK_NOTIFICATION_ARRAY_ENTRIES                       0
+      | 
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:40: warning: "configUSE_TASK_NOTIFICATIONS" redefined
+   40 | #define configUSE_TASK_NOTIFICATIONS                                1
+      | 
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:22: note: this is the location of the previous definition
+   22 | #define configUSE_TASK_NOTIFICATIONS                                0
+      | 
+- CC Source/tasks.c
+In file included from Source/include/FreeRTOS.h:59,
+                 from Source/tasks.c:39:
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:39: warning: "configTASK_NOTIFICATION_ARRAY_ENTRIES" redefined
+   39 | #define configTASK_NOTIFICATION_ARRAY_ENTRIES                       1
+      | 
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:23: note: this is the location of the previous definition
+   23 | #define configTASK_NOTIFICATION_ARRAY_ENTRIES                       0
+      | 
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:40: warning: "configUSE_TASK_NOTIFICATIONS" redefined
+   40 | #define configUSE_TASK_NOTIFICATIONS                                1
+      | 
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:22: note: this is the location of the previous definition
+   22 | #define configUSE_TASK_NOTIFICATIONS                                0
+      | 
+- CC Source/portable/GCC/ARM_CM4F/port.c
+In file included from Source/include/FreeRTOS.h:59,
+                 from Source/portable/GCC/ARM_CM4F/port.c:34:
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:39: warning: "configTASK_NOTIFICATION_ARRAY_ENTRIES" redefined
+   39 | #define configTASK_NOTIFICATION_ARRAY_ENTRIES                       1
+      | 
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:23: note: this is the location of the previous definition
+   23 | #define configTASK_NOTIFICATION_ARRAY_ENTRIES                       0
+      | 
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:40: warning: "configUSE_TASK_NOTIFICATIONS" redefined
+   40 | #define configUSE_TASK_NOTIFICATIONS                                1
+      | 
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:22: note: this is the location of the previous definition
+   22 | #define configUSE_TASK_NOTIFICATIONS                                0
+      | 
+- CC Source/timers.c
+In file included from Source/include/FreeRTOS.h:59,
+                 from Source/timers.c:37:
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:39: warning: "configTASK_NOTIFICATION_ARRAY_ENTRIES" redefined
+   39 | #define configTASK_NOTIFICATION_ARRAY_ENTRIES                       1
+      | 
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:23: note: this is the location of the previous definition
+   23 | #define configTASK_NOTIFICATION_ARRAY_ENTRIES                       0
+      | 
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:40: warning: "configUSE_TASK_NOTIFICATIONS" redefined
+   40 | #define configUSE_TASK_NOTIFICATIONS                                1
+      | 
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:22: note: this is the location of the previous definition
+   22 | #define configUSE_TASK_NOTIFICATIONS                                0
+      | 
+- CC Source/croutine.c
+In file included from Source/include/FreeRTOS.h:59,
+                 from Source/croutine.c:29:
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:39: warning: "configTASK_NOTIFICATION_ARRAY_ENTRIES" redefined
+   39 | #define configTASK_NOTIFICATION_ARRAY_ENTRIES                       1
+      | 
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:23: note: this is the location of the previous definition
+   23 | #define configTASK_NOTIFICATION_ARRAY_ENTRIES                       0
+      | 
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:40: warning: "configUSE_TASK_NOTIFICATIONS" redefined
+   40 | #define configUSE_TASK_NOTIFICATIONS                                1
+      | 
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:22: note: this is the location of the previous definition
+   22 | #define configUSE_TASK_NOTIFICATIONS                                0
+      | 
+- CC Source/event_groups.c
+In file included from Source/include/FreeRTOS.h:59,
+                 from Source/event_groups.c:38:
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:39: warning: "configTASK_NOTIFICATION_ARRAY_ENTRIES" redefined
+   39 | #define configTASK_NOTIFICATION_ARRAY_ENTRIES                       1
+      | 
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:23: note: this is the location of the previous definition
+   23 | #define configTASK_NOTIFICATION_ARRAY_ENTRIES                       0
+      | 
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:40: warning: "configUSE_TASK_NOTIFICATIONS" redefined
+   40 | #define configUSE_TASK_NOTIFICATIONS                                1
+      | 
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:22: note: this is the location of the previous definition
+   22 | #define configUSE_TASK_NOTIFICATIONS                                0
+      | 
+- CC Source/stream_buffer.c
+In file included from Source/include/FreeRTOS.h:59,
+                 from Source/stream_buffer.c:39:
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:39: warning: "configTASK_NOTIFICATION_ARRAY_ENTRIES" redefined
+   39 | #define configTASK_NOTIFICATION_ARRAY_ENTRIES                       1
+      | 
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:23: note: this is the location of the previous definition
+   23 | #define configTASK_NOTIFICATION_ARRAY_ENTRIES                       0
+      | 
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:40: warning: "configUSE_TASK_NOTIFICATIONS" redefined
+   40 | #define configUSE_TASK_NOTIFICATIONS                                1
+      | 
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:22: note: this is the location of the previous definition
+   22 | #define configUSE_TASK_NOTIFICATIONS                                0
+      | 
+- CC Source/portable/MemMang/heap_4.c
+In file included from Source/include/FreeRTOS.h:59,
+                 from Source/portable/MemMang/heap_4.c:45:
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:39: warning: "configTASK_NOTIFICATION_ARRAY_ENTRIES" redefined
+   39 | #define configTASK_NOTIFICATION_ARRAY_ENTRIES                       1
+      | 
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:23: note: this is the location of the previous definition
+   23 | #define configTASK_NOTIFICATION_ARRAY_ENTRIES                       0
+      | 
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:40: warning: "configUSE_TASK_NOTIFICATIONS" redefined
+   40 | #define configUSE_TASK_NOTIFICATIONS                                1
+      | 
+/home/rhys/freeRTOS78000/include/FreeRTOSConfig.h:22: note: this is the location of the previous definition
+   22 | #define configUSE_TASK_NOTIFICATIONS                                0
+      | 
+- AR /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a
 make[1]: Leaving directory '/home/rhys/msdk/Libraries/FreeRTOS'
+- CC src/FreeRTOS_hooks.c
+In file included from /home/rhys/msdk/Libraries/FreeRTOS//Source/include/FreeRTOS.h:59,
+                 from src/FreeRTOS_hooks.c:1:
+include/FreeRTOSConfig.h:39: warning: "configTASK_NOTIFICATION_ARRAY_ENTRIES" redefined
+   39 | #define configTASK_NOTIFICATION_ARRAY_ENTRIES                       1
+      | 
+include/FreeRTOSConfig.h:23: note: this is the location of the previous definition
+   23 | #define configTASK_NOTIFICATION_ARRAY_ENTRIES                       0
+      | 
+include/FreeRTOSConfig.h:40: warning: "configUSE_TASK_NOTIFICATIONS" redefined
+   40 | #define configUSE_TASK_NOTIFICATIONS                                1
+      | 
+include/FreeRTOSConfig.h:22: note: this is the location of the previous definition
+   22 | #define configUSE_TASK_NOTIFICATIONS                                0
+      | 
+- CC src/main.c
+In file included from /home/rhys/msdk/Libraries/FreeRTOS//Source/include/FreeRTOS.h:59,
+                 from src/main.c:29:
+include/FreeRTOSConfig.h:39: warning: "configTASK_NOTIFICATION_ARRAY_ENTRIES" redefined
+   39 | #define configTASK_NOTIFICATION_ARRAY_ENTRIES                       1
+      | 
+include/FreeRTOSConfig.h:23: note: this is the location of the previous definition
+   23 | #define configTASK_NOTIFICATION_ARRAY_ENTRIES                       0
+      | 
+include/FreeRTOSConfig.h:40: warning: "configUSE_TASK_NOTIFICATIONS" redefined
+   40 | #define configUSE_TASK_NOTIFICATIONS                                1
+      | 
+include/FreeRTOSConfig.h:22: note: this is the location of the previous definition
+   22 | #define configUSE_TASK_NOTIFICATIONS                                0
+      | 
+- CC /home/rhys/msdk/Libraries/FreeRTOS-Plus/Source/FreeRTOS-Plus-CLI/FreeRTOS_CLI.c
+In file included from /home/rhys/msdk/Libraries/FreeRTOS//Source/include/FreeRTOS.h:59,
+                 from /home/rhys/msdk/Libraries/FreeRTOS-Plus/Source/FreeRTOS-Plus-CLI/FreeRTOS_CLI.c:32:
+include/FreeRTOSConfig.h:39: warning: "configTASK_NOTIFICATION_ARRAY_ENTRIES" redefined
+   39 | #define configTASK_NOTIFICATION_ARRAY_ENTRIES                       1
+      | 
+include/FreeRTOSConfig.h:23: note: this is the location of the previous definition
+   23 | #define configTASK_NOTIFICATION_ARRAY_ENTRIES                       0
+      | 
+include/FreeRTOSConfig.h:40: warning: "configUSE_TASK_NOTIFICATIONS" redefined
+   40 | #define configUSE_TASK_NOTIFICATIONS                                1
+      | 
+include/FreeRTOSConfig.h:22: note: this is the location of the previous definition
+   22 | #define configUSE_TASK_NOTIFICATIONS                                0
+      | 
 - LD /home/rhys/freeRTOS78000/build/max78000.elf
-/usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/bin/ld: /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(tasks.o): in function `xTaskCreate':
-/home/rhys/msdk/Libraries/FreeRTOS/Source/tasks.c:763:(.text.xTaskCreate+0x10): undefined reference to `pvPortMallocStack'
-/usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/bin/ld: /home/rhys/msdk/Libraries/FreeRTOS/Source/tasks.c:781:(.text.xTaskCreate+0x58): undefined reference to `vPortFreeStack'
 Memory region         Used Size  Region Size  %age Used
              ROM:           0 B        64 KB      0.00%
            FLASH:       42496 B       512 KB      8.11%
             SRAM:       32228 B       128 KB     24.59%
-collect2: error: ld returned 1 exit status
-make: *** [/home/rhys/msdk/Libraries/CMSIS/Device/Maxim/GCC/gcc.mk:659: /home/rhys/freeRTOS78000/build/max78000.elf] Error 1
+arm-none-eabi-size --format=berkeley /home/rhys/freeRTOS78000/build/max78000.elf
+   text	   data	    bss	    dec	    hex	filename
+  40232	   1840	  30812	  72884	  11cb4	/home/rhys/freeRTOS78000/build/max78000.elf

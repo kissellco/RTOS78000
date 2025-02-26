@@ -44,7 +44,7 @@
 #define configSUPPORT_DYNAMIC_ALLOCATION                            1
 #define configTOTAL_HEAP_SIZE                                       ((size_t)(26 * 1024))
 #define configAPPLICATION_ALLOCATED_HEAP                            1
-#define configSTACK_ALLOCATION_FROM_SEPARATE_HEAP                   1
+#define configSTACK_ALLOCATION_FROM_SEPARATE_HEAP                   0
 
 // Hook functions 
 #define configUSE_IDLE_HOOK                                 0
