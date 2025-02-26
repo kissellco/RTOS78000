@@ -28,7 +28,8 @@ MXC_OPTIMIZE_CFLAGS = -Og
 
 # **********************************************************
 # Custom config goes here.
-DEBUG=1
-LIB_FREERTOS = 1
-FREERTOS_HEAP_TYPE := 4
+MAXIM_PATH = 			/home/rhys/msdk
+DEBUG = 				1
+LIB_FREERTOS = 			1
+FREERTOS_HEAP_TYPE := 	4
 export FREERTOS_HEAP_TYPE
