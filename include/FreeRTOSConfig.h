@@ -11,8 +11,8 @@
 
 // Clocks
 #define configCPU_CLOCK_HZ                                          ((uint32_t)IPO_FREQ)
-#define configRTC_TICK_RATE_HZ          (32768) //Set to realtime clock oscillator
-#define configTICK_RATE_HZ              ((portTickType)1000) // Improves time resolution
+#define configRTC_TICK_RATE_HZ                                      (32768) //Set to realtime clock oscillator
+#define configTICK_RATE_HZ                                          ((portTickType)1000) // Improves time resolution
 
 // Scheduler
 #define configMAX_PRIORITIES                                        5
@@ -28,7 +28,7 @@
 #define configUSE_QUEUE_SETS                                        0
 #define configUSE_TIME_SLICING                                      0
 #define configUSE_NEWLIB_REENTRANT                                  0
-#define configENABLE_BACKWARD_COMPATIBILITY                         0
+#define configENABLE_BACKWARD_COMPATIBILITY                         1
 #define configNUM_THREAD_LOCAL_STORAGE_POINTERS                     5
 #define configUSE_MINI_LIST_ITEM                                    1
 #define configSTACK_DEPTH_TYPE                                      uint16_t
@@ -52,7 +52,7 @@
 
 // Co-routines 
 #define configUSE_CO_ROUTINES                               0
-#define configMAX_CO_ROUTINE_PRIORITIES                     1 // Not used. Has to be defined.
+#define configMAX_CO_ROUTINE_PRIORITIES                     1 // Not used, but has to be defined.
 
 // Timers
 #define configUSE_TIMERS                                    1
