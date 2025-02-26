@@ -157,13 +157,13 @@ export CMSIS_ROOT
 # Where to find source files for this project.
 VPATH += .
 VPATH += src
-VPATH += libraries
+VPATH += lib
 VPATH := $(VPATH)
 
 # Where to find header files for this project
 IPATH += .
 IPATH += include
-IPATH += libraries
+IPATH += lib
 IPATH := $(IPATH)
 
 AUTOSEARCH ?= 1
