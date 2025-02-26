@@ -19,8 +19,6 @@
 #define configMINIMAL_STACK_SIZE                                    ((uint16_t)128)
 #define configUSE_16_BIT_TICKS                                      0
 #define configIDLE_SHOULD_YIELD                                     0
-#define configUSE_TASK_NOTIFICATIONS                                0
-#define configTASK_NOTIFICATION_ARRAY_ENTRIES                       0
 #define configUSE_MUTEXES                                           1 // Prevent priority inheritance attack
 #define configUSE_RECURSIVE_MUTEXES                                 0
 #define configUSE_COUNTING_SEMAPHORES                               0

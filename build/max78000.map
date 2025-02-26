@@ -336,7 +336,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x4b1 /home/rhys/freeRTOS78000/build/main.o
  .debug_macro   0x00000000      0x801 /home/rhys/freeRTOS78000/build/main.o
  .debug_macro   0x00000000      0x12a /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x00000000      0x1b4 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x00000000      0x1a8 /home/rhys/freeRTOS78000/build/main.o
  .debug_macro   0x00000000      0x15a /home/rhys/freeRTOS78000/build/main.o
  .debug_macro   0x00000000       0xcf /home/rhys/freeRTOS78000/build/main.o
  .debug_macro   0x00000000       0x22 /home/rhys/freeRTOS78000/build/main.o
@@ -1762,7 +1762,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x4b1 /home/rhys/freeRTOS78000/build/FreeRTOS_CLI.o
  .debug_macro   0x00000000      0x801 /home/rhys/freeRTOS78000/build/FreeRTOS_CLI.o
  .debug_macro   0x00000000      0x12a /home/rhys/freeRTOS78000/build/FreeRTOS_CLI.o
- .debug_macro   0x00000000      0x1b4 /home/rhys/freeRTOS78000/build/FreeRTOS_CLI.o
+ .debug_macro   0x00000000      0x1a8 /home/rhys/freeRTOS78000/build/FreeRTOS_CLI.o
  .debug_macro   0x00000000      0x15a /home/rhys/freeRTOS78000/build/FreeRTOS_CLI.o
  .debug_macro   0x00000000       0xcf /home/rhys/freeRTOS78000/build/FreeRTOS_CLI.o
  .debug_macro   0x00000000       0x22 /home/rhys/freeRTOS78000/build/FreeRTOS_CLI.o
@@ -1773,7 +1773,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x120 /home/rhys/freeRTOS78000/build/FreeRTOS_CLI.o
  .debug_macro   0x00000000       0x10 /home/rhys/freeRTOS78000/build/FreeRTOS_CLI.o
  .debug_line    0x00000000      0x754 /home/rhys/freeRTOS78000/build/FreeRTOS_CLI.o
- .debug_str     0x00000000    0x19340 /home/rhys/freeRTOS78000/build/FreeRTOS_CLI.o
+ .debug_str     0x00000000    0x192f9 /home/rhys/freeRTOS78000/build/FreeRTOS_CLI.o
  .comment       0x00000000       0x27 /home/rhys/freeRTOS78000/build/FreeRTOS_CLI.o
  .debug_frame   0x00000000       0x9c /home/rhys/freeRTOS78000/build/FreeRTOS_CLI.o
  .ARM.attributes
@@ -5209,7 +5209,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x4b1 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(tasks.o)
  .debug_macro   0x00000000      0x801 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(tasks.o)
  .debug_macro   0x00000000      0x12a /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(tasks.o)
- .debug_macro   0x00000000      0x1b4 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(tasks.o)
+ .debug_macro   0x00000000      0x1a8 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(tasks.o)
  .debug_macro   0x00000000      0x15a /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(tasks.o)
  .debug_macro   0x00000000       0xcf /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(tasks.o)
  .debug_macro   0x00000000       0x22 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(tasks.o)
@@ -5260,7 +5260,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x4b1 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(port.o)
  .debug_macro   0x00000000      0x801 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(port.o)
  .debug_macro   0x00000000      0x12a /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(port.o)
- .debug_macro   0x00000000      0x1b4 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(port.o)
+ .debug_macro   0x00000000      0x1a8 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(port.o)
  .debug_macro   0x00000000      0x15a /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(port.o)
  .debug_macro   0x00000000       0xcf /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(port.o)
  .debug_macro   0x00000000       0x22 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(port.o)
@@ -5371,7 +5371,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x4b1 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(timers.o)
  .debug_macro   0x00000000      0x801 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(timers.o)
  .debug_macro   0x00000000      0x12a /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(timers.o)
- .debug_macro   0x00000000      0x1b4 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(timers.o)
+ .debug_macro   0x00000000      0x1a8 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(timers.o)
  .debug_macro   0x00000000      0x15a /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(timers.o)
  .debug_macro   0x00000000       0xcf /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(timers.o)
  .debug_macro   0x00000000       0x22 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(timers.o)
@@ -5469,7 +5469,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x4b1 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(heap_4.o)
  .debug_macro   0x00000000      0x801 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(heap_4.o)
  .debug_macro   0x00000000      0x12a /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(heap_4.o)
- .debug_macro   0x00000000      0x1b4 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(heap_4.o)
+ .debug_macro   0x00000000      0x1a8 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(heap_4.o)
  .debug_macro   0x00000000      0x15a /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(heap_4.o)
  .debug_macro   0x00000000       0xcf /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(heap_4.o)
  .debug_macro   0x00000000       0x22 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(heap_4.o)
@@ -5553,7 +5553,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x4b1 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(list.o)
  .debug_macro   0x00000000      0x801 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(list.o)
  .debug_macro   0x00000000      0x12a /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(list.o)
- .debug_macro   0x00000000      0x1b4 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(list.o)
+ .debug_macro   0x00000000      0x1a8 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(list.o)
  .debug_macro   0x00000000      0x15a /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(list.o)
  .debug_macro   0x00000000       0xcf /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(list.o)
  .debug_macro   0x00000000       0x22 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(list.o)
@@ -5678,7 +5678,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x4b1 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(queue.o)
  .debug_macro   0x00000000      0x801 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(queue.o)
  .debug_macro   0x00000000      0x12a /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(queue.o)
- .debug_macro   0x00000000      0x1b4 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(queue.o)
+ .debug_macro   0x00000000      0x1a8 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(queue.o)
  .debug_macro   0x00000000      0x15a /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(queue.o)
  .debug_macro   0x00000000       0xcf /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(queue.o)
  .debug_macro   0x00000000       0x22 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(queue.o)
@@ -7864,7 +7864,7 @@ LOAD linker stubs
  .debug_rnglists
                 0x000012f6       0x84 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/softfp/libgcc.a(_udivmoddi4.o)
 
-.debug_macro    0x00000000     0xd99e
+.debug_macro    0x00000000     0xd992
  .debug_macro   0x00000000       0xfc /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
  .debug_macro   0x000000fc      0xaf6 /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
  .debug_macro   0x00000bf2      0x190 /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
@@ -7879,132 +7879,132 @@ LOAD linker stubs
  .debug_macro   0x000023c5      0x4b1 /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
  .debug_macro   0x00002876      0x801 /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
  .debug_macro   0x00003077      0x12a /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
- .debug_macro   0x000031a1      0x1b4 /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
- .debug_macro   0x00003355      0x15a /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
- .debug_macro   0x000034af       0xcf /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
- .debug_macro   0x0000357e       0x22 /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
- .debug_macro   0x000035a0       0x1f /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
- .debug_macro   0x000035bf       0x12 /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
- .debug_macro   0x000035d1      0x47f /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
- .debug_macro   0x00003a50       0xc3 /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
- .debug_macro   0x00003b13      0x120 /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
- .debug_macro   0x00003c33      0x36a /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x00003f9d       0x22 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x00003fbf       0x60 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x0000401f       0x2a /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x00004049       0x94 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x000040dd       0x3c /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x00004119       0x34 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x0000414d       0x16 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x00004163       0x57 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x000041ba       0x9e /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x00004258      0x370 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x000045c8      0x112 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x000046da       0x10 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x000046ea       0x16 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x00004700       0x4a /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x0000474a       0x34 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x0000477e       0x10 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x0000478e       0x52 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x000047e0      0x1de /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x000049be       0x16 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x000049d4       0x16 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x000049ea      0x170 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x00004b5a       0x16 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x00004b70       0x3c /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x00004bac       0x87 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x00004c33       0x77 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x00004caa       0x82 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x00004d2c      0x502 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x0000522e       0xdc /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x0000530a       0x22 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x0000532c       0x22 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x0000534e      0x3da /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x00005728       0xb0 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x000057d8       0x20 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x000057f8      0x222 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x00005a1a      0x15c /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x00005b76       0x4c /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x00005bc2      0x5ca /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x0000618c      0x5d4 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x00006760       0x16 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x00006776       0x16 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x0000678c       0x1c /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x000067a8       0x96 /home/rhys/freeRTOS78000/build/main.o
- .debug_macro   0x0000683e      0x272 /home/rhys/freeRTOS78000/build/board.o
- .debug_macro   0x00006ab0       0x16 /home/rhys/freeRTOS78000/build/board.o
- .debug_macro   0x00006ac6       0x40 /home/rhys/freeRTOS78000/build/board.o
- .debug_macro   0x00006b06      0x218 /home/rhys/freeRTOS78000/build/board.o
- .debug_macro   0x00006d1e      0x3b3 /home/rhys/freeRTOS78000/build/stdio.o
- .debug_macro   0x000070d1      0x23c /home/rhys/freeRTOS78000/build/stdio.o
- .debug_macro   0x0000730d       0x1c /home/rhys/freeRTOS78000/build/stdio.o
- .debug_macro   0x00007329       0x16 /home/rhys/freeRTOS78000/build/stdio.o
- .debug_macro   0x0000733f       0x16 /home/rhys/freeRTOS78000/build/stdio.o
- .debug_macro   0x00007355       0x29 /home/rhys/freeRTOS78000/build/stdio.o
- .debug_macro   0x0000737e       0x16 /home/rhys/freeRTOS78000/build/stdio.o
- .debug_macro   0x00007394       0x10 /home/rhys/freeRTOS78000/build/stdio.o
- .debug_macro   0x000073a4       0x6a /home/rhys/freeRTOS78000/build/stdio.o
- .debug_macro   0x0000740e       0x1c /home/rhys/freeRTOS78000/build/stdio.o
- .debug_macro   0x0000742a       0x52 /home/rhys/freeRTOS78000/build/stdio.o
- .debug_macro   0x0000747c       0x22 /home/rhys/freeRTOS78000/build/stdio.o
- .debug_macro   0x0000749e       0x10 /home/rhys/freeRTOS78000/build/stdio.o
- .debug_macro   0x000074ae       0x52 /home/rhys/freeRTOS78000/build/stdio.o
- .debug_macro   0x00007500       0xc1 /home/rhys/freeRTOS78000/build/stdio.o
- .debug_macro   0x000075c1       0x1c /home/rhys/freeRTOS78000/build/stdio.o
- .debug_macro   0x000075dd       0x3d /home/rhys/freeRTOS78000/build/stdio.o
- .debug_macro   0x0000761a      0x51a /home/rhys/freeRTOS78000/build/stdio.o
- .debug_macro   0x00007b34       0x16 /home/rhys/freeRTOS78000/build/stdio.o
- .debug_macro   0x00007b4a       0x10 /home/rhys/freeRTOS78000/build/stdio.o
- .debug_macro   0x00007b5a       0x41 /home/rhys/freeRTOS78000/build/stdio.o
- .debug_macro   0x00007b9b      0x12c /home/rhys/freeRTOS78000/build/stdio.o
- .debug_macro   0x00007cc7      0x247 /home/rhys/freeRTOS78000/build/led.o
- .debug_macro   0x00007f0e      0x5ec /home/rhys/freeRTOS78000/build/led.o
- .debug_macro   0x000084fa      0x7fb /home/rhys/freeRTOS78000/build/led.o
- .debug_macro   0x00008cf5      0x273 /home/rhys/freeRTOS78000/build/pb.o
- .debug_macro   0x00008f68       0x1c /home/rhys/freeRTOS78000/build/pb.o
- .debug_macro   0x00008f84      0x26c /home/rhys/freeRTOS78000/build/tft_ssd2119.o
- .debug_macro   0x000091f0       0x10 /home/rhys/freeRTOS78000/build/tft_ssd2119.o
- .debug_macro   0x00009200       0x4c /home/rhys/freeRTOS78000/build/tft_ssd2119.o
- .debug_macro   0x0000924c       0x1c /home/rhys/freeRTOS78000/build/tft_ssd2119.o
- .debug_macro   0x00009268      0x256 /home/rhys/freeRTOS78000/build/tsc2046.o
- .debug_macro   0x000094be       0x10 /home/rhys/freeRTOS78000/build/tsc2046.o
- .debug_macro   0x000094ce      0x18d /home/rhys/freeRTOS78000/build/heap.o
- .debug_macro   0x0000965b       0x10 /home/rhys/freeRTOS78000/build/heap.o
- .debug_macro   0x0000966b       0xcf /home/rhys/freeRTOS78000/build/heap.o
- .debug_macro   0x0000973a      0x23a /home/rhys/freeRTOS78000/build/system_max78000.o
- .debug_macro   0x00009974       0x88 /home/rhys/freeRTOS78000/build/system_max78000.o
- .debug_macro   0x000099fc       0xf0 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(mxc_delay.o)
- .debug_macro   0x00009aec       0xc8 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(pins_ai85.o)
- .debug_macro   0x00009bb4      0x514 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(pins_ai85.o)
- .debug_macro   0x0000a0c8      0x244 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(sys_ai85.o)
- .debug_macro   0x0000a30c      0x190 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(sys_ai85.o)
- .debug_macro   0x0000a49c       0x3a /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(sys_ai85.o)
- .debug_macro   0x0000a4d6      0x1b6 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(sys_ai85.o)
- .debug_macro   0x0000a68c       0x10 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(sys_ai85.o)
- .debug_macro   0x0000a69c      0x11e /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(sys_ai85.o)
- .debug_macro   0x0000a7ba      0x164 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(gpio_ai85.o)
- .debug_macro   0x0000a91e      0x55e /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(gpio_ai85.o)
- .debug_macro   0x0000ae7c       0xfa /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(gpio_reva.o)
- .debug_macro   0x0000af76      0x120 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(icc_me17.o)
- .debug_macro   0x0000b096       0x7a /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(icc_me17.o)
- .debug_macro   0x0000b110      0x11f /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(icc_reva.o)
- .debug_macro   0x0000b22f      0x143 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(uart_ai85.o)
- .debug_macro   0x0000b372      0x3ec /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(uart_ai85.o)
- .debug_macro   0x0000b75e      0x3bc /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(uart_ai85.o)
- .debug_macro   0x0000bb1a      0x10c /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(uart_common.o)
- .debug_macro   0x0000bc26      0x23f /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(uart_revb.o)
- .debug_macro   0x0000be65       0xde /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(gpio_common.o)
- .debug_macro   0x0000bf43       0xe2 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(gpio_common.o)
- .debug_macro   0x0000c025      0x2be /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(tasks.o)
- .debug_macro   0x0000c2e3      0xafc /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(tasks.o)
- .debug_macro   0x0000cddf       0x91 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(tasks.o)
- .debug_macro   0x0000ce70       0x16 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(tasks.o)
- .debug_macro   0x0000ce86      0x1ce /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(port.o)
- .debug_macro   0x0000d054      0x226 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(timers.o)
- .debug_macro   0x0000d27a       0x97 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(timers.o)
- .debug_macro   0x0000d311      0x24d /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(heap_4.o)
- .debug_macro   0x0000d55e      0x1d7 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(list.o)
- .debug_macro   0x0000d735      0x269 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(queue.o)
+ .debug_macro   0x000031a1      0x1a8 /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
+ .debug_macro   0x00003349      0x15a /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
+ .debug_macro   0x000034a3       0xcf /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
+ .debug_macro   0x00003572       0x22 /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
+ .debug_macro   0x00003594       0x1f /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
+ .debug_macro   0x000035b3       0x12 /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
+ .debug_macro   0x000035c5      0x47f /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
+ .debug_macro   0x00003a44       0xc3 /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
+ .debug_macro   0x00003b07      0x120 /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
+ .debug_macro   0x00003c27      0x36a /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x00003f91       0x22 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x00003fb3       0x60 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x00004013       0x2a /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x0000403d       0x94 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x000040d1       0x3c /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x0000410d       0x34 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x00004141       0x16 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x00004157       0x57 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x000041ae       0x9e /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x0000424c      0x370 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x000045bc      0x112 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x000046ce       0x10 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x000046de       0x16 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x000046f4       0x4a /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x0000473e       0x34 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x00004772       0x10 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x00004782       0x52 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x000047d4      0x1de /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x000049b2       0x16 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x000049c8       0x16 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x000049de      0x170 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x00004b4e       0x16 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x00004b64       0x3c /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x00004ba0       0x87 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x00004c27       0x77 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x00004c9e       0x82 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x00004d20      0x502 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x00005222       0xdc /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x000052fe       0x22 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x00005320       0x22 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x00005342      0x3da /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x0000571c       0xb0 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x000057cc       0x20 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x000057ec      0x222 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x00005a0e      0x15c /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x00005b6a       0x4c /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x00005bb6      0x5ca /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x00006180      0x5d4 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x00006754       0x16 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x0000676a       0x16 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x00006780       0x1c /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x0000679c       0x96 /home/rhys/freeRTOS78000/build/main.o
+ .debug_macro   0x00006832      0x272 /home/rhys/freeRTOS78000/build/board.o
+ .debug_macro   0x00006aa4       0x16 /home/rhys/freeRTOS78000/build/board.o
+ .debug_macro   0x00006aba       0x40 /home/rhys/freeRTOS78000/build/board.o
+ .debug_macro   0x00006afa      0x218 /home/rhys/freeRTOS78000/build/board.o
+ .debug_macro   0x00006d12      0x3b3 /home/rhys/freeRTOS78000/build/stdio.o
+ .debug_macro   0x000070c5      0x23c /home/rhys/freeRTOS78000/build/stdio.o
+ .debug_macro   0x00007301       0x1c /home/rhys/freeRTOS78000/build/stdio.o
+ .debug_macro   0x0000731d       0x16 /home/rhys/freeRTOS78000/build/stdio.o
+ .debug_macro   0x00007333       0x16 /home/rhys/freeRTOS78000/build/stdio.o
+ .debug_macro   0x00007349       0x29 /home/rhys/freeRTOS78000/build/stdio.o
+ .debug_macro   0x00007372       0x16 /home/rhys/freeRTOS78000/build/stdio.o
+ .debug_macro   0x00007388       0x10 /home/rhys/freeRTOS78000/build/stdio.o
+ .debug_macro   0x00007398       0x6a /home/rhys/freeRTOS78000/build/stdio.o
+ .debug_macro   0x00007402       0x1c /home/rhys/freeRTOS78000/build/stdio.o
+ .debug_macro   0x0000741e       0x52 /home/rhys/freeRTOS78000/build/stdio.o
+ .debug_macro   0x00007470       0x22 /home/rhys/freeRTOS78000/build/stdio.o
+ .debug_macro   0x00007492       0x10 /home/rhys/freeRTOS78000/build/stdio.o
+ .debug_macro   0x000074a2       0x52 /home/rhys/freeRTOS78000/build/stdio.o
+ .debug_macro   0x000074f4       0xc1 /home/rhys/freeRTOS78000/build/stdio.o
+ .debug_macro   0x000075b5       0x1c /home/rhys/freeRTOS78000/build/stdio.o
+ .debug_macro   0x000075d1       0x3d /home/rhys/freeRTOS78000/build/stdio.o
+ .debug_macro   0x0000760e      0x51a /home/rhys/freeRTOS78000/build/stdio.o
+ .debug_macro   0x00007b28       0x16 /home/rhys/freeRTOS78000/build/stdio.o
+ .debug_macro   0x00007b3e       0x10 /home/rhys/freeRTOS78000/build/stdio.o
+ .debug_macro   0x00007b4e       0x41 /home/rhys/freeRTOS78000/build/stdio.o
+ .debug_macro   0x00007b8f      0x12c /home/rhys/freeRTOS78000/build/stdio.o
+ .debug_macro   0x00007cbb      0x247 /home/rhys/freeRTOS78000/build/led.o
+ .debug_macro   0x00007f02      0x5ec /home/rhys/freeRTOS78000/build/led.o
+ .debug_macro   0x000084ee      0x7fb /home/rhys/freeRTOS78000/build/led.o
+ .debug_macro   0x00008ce9      0x273 /home/rhys/freeRTOS78000/build/pb.o
+ .debug_macro   0x00008f5c       0x1c /home/rhys/freeRTOS78000/build/pb.o
+ .debug_macro   0x00008f78      0x26c /home/rhys/freeRTOS78000/build/tft_ssd2119.o
+ .debug_macro   0x000091e4       0x10 /home/rhys/freeRTOS78000/build/tft_ssd2119.o
+ .debug_macro   0x000091f4       0x4c /home/rhys/freeRTOS78000/build/tft_ssd2119.o
+ .debug_macro   0x00009240       0x1c /home/rhys/freeRTOS78000/build/tft_ssd2119.o
+ .debug_macro   0x0000925c      0x256 /home/rhys/freeRTOS78000/build/tsc2046.o
+ .debug_macro   0x000094b2       0x10 /home/rhys/freeRTOS78000/build/tsc2046.o
+ .debug_macro   0x000094c2      0x18d /home/rhys/freeRTOS78000/build/heap.o
+ .debug_macro   0x0000964f       0x10 /home/rhys/freeRTOS78000/build/heap.o
+ .debug_macro   0x0000965f       0xcf /home/rhys/freeRTOS78000/build/heap.o
+ .debug_macro   0x0000972e      0x23a /home/rhys/freeRTOS78000/build/system_max78000.o
+ .debug_macro   0x00009968       0x88 /home/rhys/freeRTOS78000/build/system_max78000.o
+ .debug_macro   0x000099f0       0xf0 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(mxc_delay.o)
+ .debug_macro   0x00009ae0       0xc8 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(pins_ai85.o)
+ .debug_macro   0x00009ba8      0x514 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(pins_ai85.o)
+ .debug_macro   0x0000a0bc      0x244 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(sys_ai85.o)
+ .debug_macro   0x0000a300      0x190 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(sys_ai85.o)
+ .debug_macro   0x0000a490       0x3a /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(sys_ai85.o)
+ .debug_macro   0x0000a4ca      0x1b6 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(sys_ai85.o)
+ .debug_macro   0x0000a680       0x10 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(sys_ai85.o)
+ .debug_macro   0x0000a690      0x11e /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(sys_ai85.o)
+ .debug_macro   0x0000a7ae      0x164 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(gpio_ai85.o)
+ .debug_macro   0x0000a912      0x55e /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(gpio_ai85.o)
+ .debug_macro   0x0000ae70       0xfa /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(gpio_reva.o)
+ .debug_macro   0x0000af6a      0x120 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(icc_me17.o)
+ .debug_macro   0x0000b08a       0x7a /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(icc_me17.o)
+ .debug_macro   0x0000b104      0x11f /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(icc_reva.o)
+ .debug_macro   0x0000b223      0x143 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(uart_ai85.o)
+ .debug_macro   0x0000b366      0x3ec /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(uart_ai85.o)
+ .debug_macro   0x0000b752      0x3bc /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(uart_ai85.o)
+ .debug_macro   0x0000bb0e      0x10c /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(uart_common.o)
+ .debug_macro   0x0000bc1a      0x23f /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(uart_revb.o)
+ .debug_macro   0x0000be59       0xde /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(gpio_common.o)
+ .debug_macro   0x0000bf37       0xe2 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(gpio_common.o)
+ .debug_macro   0x0000c019      0x2be /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(tasks.o)
+ .debug_macro   0x0000c2d7      0xafc /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(tasks.o)
+ .debug_macro   0x0000cdd3       0x91 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(tasks.o)
+ .debug_macro   0x0000ce64       0x16 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(tasks.o)
+ .debug_macro   0x0000ce7a      0x1ce /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(port.o)
+ .debug_macro   0x0000d048      0x226 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(timers.o)
+ .debug_macro   0x0000d26e       0x97 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(timers.o)
+ .debug_macro   0x0000d305      0x24d /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(heap_4.o)
+ .debug_macro   0x0000d552      0x1d7 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(list.o)
+ .debug_macro   0x0000d729      0x269 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(queue.o)
 
 .debug_line     0x00000000    0x1e348
  .debug_line    0x00000000      0x355 /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
@@ -8096,96 +8096,96 @@ LOAD linker stubs
  .debug_line    0x0001dd8a      0x574 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/softfp/libgcc.a(_udivmoddi4.o)
  .debug_line    0x0001e2fe       0x4a /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/softfp/libgcc.a(_dvmd_tls.o)
 
-.debug_str      0x00000000    0x41a91
- .debug_str     0x00000000    0x41a91 /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
-                              0x1648f (size before relaxing)
- .debug_str     0x00041a91    0x28727 /home/rhys/freeRTOS78000/build/main.o
- .debug_str     0x00041a91    0x1f2be /home/rhys/freeRTOS78000/build/board.o
- .debug_str     0x00041a91    0x1fc73 /home/rhys/freeRTOS78000/build/stdio.o
- .debug_str     0x00041a91    0x1b9d9 /home/rhys/freeRTOS78000/build/led.o
- .debug_str     0x00041a91    0x1c200 /home/rhys/freeRTOS78000/build/pb.o
- .debug_str     0x00041a91    0x1c3ce /home/rhys/freeRTOS78000/build/tft_ssd2119.o
- .debug_str     0x00041a91    0x1c06e /home/rhys/freeRTOS78000/build/tsc2046.o
- .debug_str     0x00041a91     0x8924 /home/rhys/freeRTOS78000/build/heap.o
- .debug_str     0x00041a91    0x18b09 /home/rhys/freeRTOS78000/build/system_max78000.o
- .debug_str     0x00041a91    0x151a2 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(mxc_delay.o)
- .debug_str     0x00041a91    0x14d0a /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(pins_ai85.o)
- .debug_str     0x00041a91    0x1d07b /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(sys_ai85.o)
- .debug_str     0x00041a91    0x1b70f /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(gpio_ai85.o)
- .debug_str     0x00041a91    0x1873b /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(gpio_reva.o)
- .debug_str     0x00041a91    0x156a6 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(icc_me17.o)
- .debug_str     0x00041a91    0x15996 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(icc_reva.o)
- .debug_str     0x00041a91    0x1d1c5 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(uart_ai85.o)
- .debug_str     0x00041a91    0x16cb0 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(uart_common.o)
- .debug_str     0x00041a91    0x20526 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(uart_revb.o)
- .debug_str     0x00041a91    0x14ebc /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(gpio_common.o)
- .debug_str     0x00041a91    0x1afd8 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(tasks.o)
- .debug_str     0x00041a91    0x16b43 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(port.o)
- .debug_str     0x00041a91    0x1aa8a /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(timers.o)
- .debug_str     0x00041a91    0x19703 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(heap_4.o)
- .debug_str     0x00041a91    0x17f27 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(list.o)
- .debug_str     0x00041a91    0x1a6d5 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(queue.o)
- .debug_str     0x00041a91       0xa8 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-strlen.o)
- .debug_str     0x00041a91      0x1ae /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-memset.o)
- .debug_str     0x00041a91      0x4a7 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-errno.o)
- .debug_str     0x00041a91      0x4b2 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-impure.o)
- .debug_str     0x00041a91      0x6d5 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-mallocr.o)
- .debug_str     0x00041a91      0x885 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-dtoa.o)
- .debug_str     0x00041a91      0x61d /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-freer.o)
- .debug_str     0x00041a91      0x4d2 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-malloc.o)
- .debug_str     0x00041a91       0xa9 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-memcpy.o)
- .debug_str     0x00041a91      0x1a3 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-sysconf.o)
- .debug_str     0x00041a91      0x1fb /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-init.o)
- .debug_str     0x00041a91      0x4cb /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-mlock.o)
- .debug_str     0x00041a91      0x6b5 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-findfp.o)
- .debug_str     0x00041a91      0x526 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-puts.o)
- .debug_str     0x00041a91      0x551 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-fvwrite.o)
- .debug_str     0x00041a91      0x1d7 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-atexit.o)
- .debug_str     0x00041a91      0x4e8 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-printf.o)
- .debug_str     0x00041a91      0x4b6 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-sbrkr.o)
- .debug_str     0x00041a91      0x1d1 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-fini.o)
- .debug_str     0x00041a91      0x4e6 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-assert.o)
- .debug_str     0x00041a91      0x7c3 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-mprec.o)
- .debug_str     0x00041a91      0x4bd /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-fwalk.o)
- .debug_str     0x00041a91      0x6f3 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-localeconv.o)
- .debug_str     0x00041a91      0x924 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-vfprintf.o)
- .debug_str     0x00041a91      0x72c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-locale.o)
- .debug_str     0x00041a91       0x9b /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-memchr.o)
- .debug_str     0x00041a91      0x6d3 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-mbtowc_r.o)
- .debug_str     0x00041a91      0x534 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-fflush.o)
- .debug_str     0x00041a91      0x1cd /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-memmove.o)
- .debug_str     0x00041a91      0x19d /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-abort.o)
- .debug_str     0x00041a91      0x4ff /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-callocr.o)
- .debug_str     0x00041a91      0x4ef /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-fiprintf.o)
- .debug_str     0x00041a91      0x4de /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-wsetup.o)
- .debug_str     0x00041a91      0x50c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-fclose.o)
- .debug_str     0x00041a91      0x6da /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-wctomb_r.o)
- .debug_str     0x00041a91      0x264 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-__call_atexit.o)
- .debug_str     0x00041a91      0x51a /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-stdio.o)
- .debug_str     0x00041a91      0x4cc /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-reent.o)
- .debug_str     0x00041a91      0x242 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-__atexit.o)
- .debug_str     0x00041a91      0x5a0 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-reallocr.o)
- .debug_str     0x00041a91      0x4b3 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-writer.o)
- .debug_str     0x00041a91      0x193 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-ctype_.o)
- .debug_str     0x00041a91      0x4a3 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-closer.o)
- .debug_str     0x00041a91      0x534 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-signal.o)
- .debug_str     0x00041a91      0x4f6 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-sprint_r.o)
- .debug_str     0x00041a91      0x640 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-makebuf.o)
- .debug_str     0x00041a91      0x4c9 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-signalr.o)
- .debug_str     0x00041a91      0x83a /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-vfiprintf.o)
- .debug_str     0x00041a91      0x4b1 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-readr.o)
- .debug_str     0x00041a91      0x4b1 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-lseekr.o)
- .debug_str     0x00041a91      0x5f5 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-fstatr.o)
- .debug_str     0x00041a91      0x4ad /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-isattyr.o)
- .debug_str     0x00041a91      0x16d /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libnosys.a(_exit.o)
- .debug_str     0x00041a91      0x156 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/softfp/libgcc.a(_arm_addsubdf3.o)
- .debug_str     0x00041a91       0xd6 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/softfp/libgcc.a(_arm_muldivdf3.o)
- .debug_str     0x00041a91      0x15f /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/softfp/libgcc.a(_arm_cmpdf2.o)
- .debug_str     0x00041a91       0xc4 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/softfp/libgcc.a(_arm_unorddf2.o)
- .debug_str     0x00041a91       0xc1 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/softfp/libgcc.a(_arm_fixdfsi.o)
- .debug_str     0x00041a91       0xa5 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/softfp/libgcc.a(_aeabi_uldivmod.o)
- .debug_str     0x00041a91      0x689 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/softfp/libgcc.a(_udivmoddi4.o)
- .debug_str     0x00041a91       0xc5 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/softfp/libgcc.a(_dvmd_tls.o)
+.debug_str      0x00000000    0x41a4a
+ .debug_str     0x00000000    0x41a4a /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
+                              0x16448 (size before relaxing)
+ .debug_str     0x00041a4a    0x286e0 /home/rhys/freeRTOS78000/build/main.o
+ .debug_str     0x00041a4a    0x1f2be /home/rhys/freeRTOS78000/build/board.o
+ .debug_str     0x00041a4a    0x1fc73 /home/rhys/freeRTOS78000/build/stdio.o
+ .debug_str     0x00041a4a    0x1b9d9 /home/rhys/freeRTOS78000/build/led.o
+ .debug_str     0x00041a4a    0x1c200 /home/rhys/freeRTOS78000/build/pb.o
+ .debug_str     0x00041a4a    0x1c3ce /home/rhys/freeRTOS78000/build/tft_ssd2119.o
+ .debug_str     0x00041a4a    0x1c06e /home/rhys/freeRTOS78000/build/tsc2046.o
+ .debug_str     0x00041a4a     0x8924 /home/rhys/freeRTOS78000/build/heap.o
+ .debug_str     0x00041a4a    0x18b09 /home/rhys/freeRTOS78000/build/system_max78000.o
+ .debug_str     0x00041a4a    0x151a2 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(mxc_delay.o)
+ .debug_str     0x00041a4a    0x14d0a /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(pins_ai85.o)
+ .debug_str     0x00041a4a    0x1d07b /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(sys_ai85.o)
+ .debug_str     0x00041a4a    0x1b70f /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(gpio_ai85.o)
+ .debug_str     0x00041a4a    0x1873b /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(gpio_reva.o)
+ .debug_str     0x00041a4a    0x156a6 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(icc_me17.o)
+ .debug_str     0x00041a4a    0x15996 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(icc_reva.o)
+ .debug_str     0x00041a4a    0x1d1c5 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(uart_ai85.o)
+ .debug_str     0x00041a4a    0x16cb0 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(uart_common.o)
+ .debug_str     0x00041a4a    0x20526 /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(uart_revb.o)
+ .debug_str     0x00041a4a    0x14ebc /home/rhys/msdk/Libraries/PeriphDrivers/bin/MAX78000/spi-v1_softfp/libPeriphDriver_spi-v1_softfp.a(gpio_common.o)
+ .debug_str     0x00041a4a    0x1af91 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(tasks.o)
+ .debug_str     0x00041a4a    0x16afc /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(port.o)
+ .debug_str     0x00041a4a    0x1aa43 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(timers.o)
+ .debug_str     0x00041a4a    0x196bc /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(heap_4.o)
+ .debug_str     0x00041a4a    0x17ee0 /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(list.o)
+ .debug_str     0x00041a4a    0x1a68e /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a(queue.o)
+ .debug_str     0x00041a4a       0xa8 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-strlen.o)
+ .debug_str     0x00041a4a      0x1ae /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-memset.o)
+ .debug_str     0x00041a4a      0x4a7 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-errno.o)
+ .debug_str     0x00041a4a      0x4b2 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-impure.o)
+ .debug_str     0x00041a4a      0x6d5 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-mallocr.o)
+ .debug_str     0x00041a4a      0x885 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-dtoa.o)
+ .debug_str     0x00041a4a      0x61d /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-freer.o)
+ .debug_str     0x00041a4a      0x4d2 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-malloc.o)
+ .debug_str     0x00041a4a       0xa9 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-memcpy.o)
+ .debug_str     0x00041a4a      0x1a3 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-sysconf.o)
+ .debug_str     0x00041a4a      0x1fb /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-init.o)
+ .debug_str     0x00041a4a      0x4cb /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-mlock.o)
+ .debug_str     0x00041a4a      0x6b5 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-findfp.o)
+ .debug_str     0x00041a4a      0x526 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-puts.o)
+ .debug_str     0x00041a4a      0x551 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-fvwrite.o)
+ .debug_str     0x00041a4a      0x1d7 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-atexit.o)
+ .debug_str     0x00041a4a      0x4e8 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-printf.o)
+ .debug_str     0x00041a4a      0x4b6 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-sbrkr.o)
+ .debug_str     0x00041a4a      0x1d1 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-fini.o)
+ .debug_str     0x00041a4a      0x4e6 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-assert.o)
+ .debug_str     0x00041a4a      0x7c3 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-mprec.o)
+ .debug_str     0x00041a4a      0x4bd /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-fwalk.o)
+ .debug_str     0x00041a4a      0x6f3 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-localeconv.o)
+ .debug_str     0x00041a4a      0x924 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-vfprintf.o)
+ .debug_str     0x00041a4a      0x72c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-locale.o)
+ .debug_str     0x00041a4a       0x9b /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-memchr.o)
+ .debug_str     0x00041a4a      0x6d3 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-mbtowc_r.o)
+ .debug_str     0x00041a4a      0x534 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-fflush.o)
+ .debug_str     0x00041a4a      0x1cd /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-memmove.o)
+ .debug_str     0x00041a4a      0x19d /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-abort.o)
+ .debug_str     0x00041a4a      0x4ff /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-callocr.o)
+ .debug_str     0x00041a4a      0x4ef /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-fiprintf.o)
+ .debug_str     0x00041a4a      0x4de /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-wsetup.o)
+ .debug_str     0x00041a4a      0x50c /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-fclose.o)
+ .debug_str     0x00041a4a      0x6da /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-wctomb_r.o)
+ .debug_str     0x00041a4a      0x264 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-__call_atexit.o)
+ .debug_str     0x00041a4a      0x51a /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-stdio.o)
+ .debug_str     0x00041a4a      0x4cc /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-reent.o)
+ .debug_str     0x00041a4a      0x242 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-__atexit.o)
+ .debug_str     0x00041a4a      0x5a0 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-reallocr.o)
+ .debug_str     0x00041a4a      0x4b3 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-writer.o)
+ .debug_str     0x00041a4a      0x193 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-ctype_.o)
+ .debug_str     0x00041a4a      0x4a3 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-closer.o)
+ .debug_str     0x00041a4a      0x534 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-signal.o)
+ .debug_str     0x00041a4a      0x4f6 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-sprint_r.o)
+ .debug_str     0x00041a4a      0x640 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-makebuf.o)
+ .debug_str     0x00041a4a      0x4c9 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-signalr.o)
+ .debug_str     0x00041a4a      0x83a /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-vfiprintf.o)
+ .debug_str     0x00041a4a      0x4b1 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-readr.o)
+ .debug_str     0x00041a4a      0x4b1 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-lseekr.o)
+ .debug_str     0x00041a4a      0x5f5 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-fstatr.o)
+ .debug_str     0x00041a4a      0x4ad /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc.a(libc_a-isattyr.o)
+ .debug_str     0x00041a4a      0x16d /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libnosys.a(_exit.o)
+ .debug_str     0x00041a4a      0x156 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/softfp/libgcc.a(_arm_addsubdf3.o)
+ .debug_str     0x00041a4a       0xd6 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/softfp/libgcc.a(_arm_muldivdf3.o)
+ .debug_str     0x00041a4a      0x15f /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/softfp/libgcc.a(_arm_cmpdf2.o)
+ .debug_str     0x00041a4a       0xc4 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/softfp/libgcc.a(_arm_unorddf2.o)
+ .debug_str     0x00041a4a       0xc1 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/softfp/libgcc.a(_arm_fixdfsi.o)
+ .debug_str     0x00041a4a       0xa5 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/softfp/libgcc.a(_aeabi_uldivmod.o)
+ .debug_str     0x00041a4a      0x689 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/softfp/libgcc.a(_udivmoddi4.o)
+ .debug_str     0x00041a4a       0xc5 /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/softfp/libgcc.a(_dvmd_tls.o)
 
 .debug_frame    0x00000000     0x3dc4
  .debug_frame   0x00000000       0x60 /home/rhys/freeRTOS78000/build/FreeRTOS_hooks.o
