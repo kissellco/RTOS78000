@@ -29,6 +29,7 @@ xPSR: 0x81000000 pc: 0x00002124 msp: 0x20003ff0
 ** Programming Started **
 Warn : Flash protection not supported on this device
 Warn : Flash protection not supported on this device
+Warn : Flash protection not supported on this device
 Error: timeout waiting for algorithm, a target reset is recommended
 Error: error -902 executing max32xxx flash write algorithm
 Error: error writing to flash at address 0x10000000 at offset 0x00000000
