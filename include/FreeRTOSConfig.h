@@ -35,6 +35,10 @@
 #define configMESSAGE_BUFFER_LENGTH_TYPE                            size_t
 #define configHEAP_CLEAR_MEMORY_ON_FREE                             1
 
+// Notifications
+#define configTASK_NOTIFICATION_ARRAY_ENTRIES                       1
+#define configUSE_TASK_NOTIFICATIONS                                1
+
 // Memory allocation
 #define configSUPPORT_STATIC_ALLOCATION                             1
 #define configSUPPORT_DYNAMIC_ALLOCATION                            1

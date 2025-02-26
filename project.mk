@@ -31,5 +31,6 @@ MXC_OPTIMIZE_CFLAGS = -Og
 MAXIM_PATH = 			/home/rhys/msdk
 DEBUG = 				1
 LIB_FREERTOS = 			1
+RTOS_CONFIG_DIR = 		include
 FREERTOS_HEAP_TYPE := 	4
 export FREERTOS_HEAP_TYPE
