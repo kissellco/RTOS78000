@@ -12,4 +12,4 @@ make[1]: Nothing to be done for 'lib'.
 make[1]: Leaving directory '/home/rhys/msdk/Libraries/FreeRTOS'
 arm-none-eabi-size --format=berkeley /home/rhys/freeRTOS78000/build/max78000.elf
    text	   data	    bss	    dec	    hex	filename
-  72148	   1840	  30856	 104844	  1998c	/home/rhys/freeRTOS78000/build/max78000.elf
+  72924	   1840	  30856	 105620	  19c94	/home/rhys/freeRTOS78000/build/max78000.elf

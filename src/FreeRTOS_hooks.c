@@ -16,7 +16,7 @@ float g_expected_delay_ms = 0.0f;
 void vApplicationMallocFailedHook(void)
 {
     /* Log the failure */
-    printf("[FATAL] Memory allocation failed! System halted.\n");
+    printf("[FATAL] Memory allocation failed! System halted. Please reboot.\n");
     
     /* Visual indication - rapidly flash red LED */
     while (1) {
@@ -31,7 +31,7 @@ void vApplicationMallocFailedHook(void)
 void vApplicationStackOverflowHook(TaskHandle_t pxTask, char *pcTaskName)
 {
     /* Log the stack overflow */
-    printf("[FATAL] Stack overflow in task %s! System halted.\n", pcTaskName);
+    printf("[FATAL] Stack overflow in task %s! System halted. Please reboot.\n", pcTaskName);
     
     /* Visual indication - solid red LED */
     LED_On(LED_RED);
@@ -70,10 +70,9 @@ void vApplicationDaemonTaskStartupHook(void)
     
     /* Indicate successful boot with a green LED */
     LED_Off(LED_RED);
-    LED_Off(LED_BLUE);
     LED_On(LED_GREEN);
     
-    printf("System initialization complete. Running tasks...\n\n");
+    printf("System initialisation complete. Running tasks...\n\n");
 }
 
 /* Static memory for idle task */
