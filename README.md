@@ -1,56 +1,79 @@
-## Description
+# Secure Video Decoder - MITRE eCTF
 
-A basic getting started application for FreeRTOS.
+This repository contains a secure video decoder implementation for the MAX78000 microcontroller, developed by Team Flinders for the MITRE Embedded Capture the Flag (eCTF) competition.
 
-## Software
+## Project Overview
 
-### Project Usage
+The secure video decoder provides a platform for securely processing and displaying video content on the MAX78000 platform. This implementation focuses on security fundamentals such as:
 
-Universal instructions on building, flashing, and debugging this project can be found in the **[MSDK User Guide](https://analogdevicesinc.github.io/msdk/USERGUIDE/)**.
-Universal instructions on building, flashing, and debugging this project can be found in the **[MSDK User Guide](https://analogdevicesinc.github.io/msdk/USERGUIDE/)**.
+- Secure boot with anti-timing attack measures
+- Anti-tamper protection
+- Secure data handling
+- Hardware-based security features of MAX78000
+- FreeRTOS integration for task management
 
-### Project-Specific Build Notes
+## Team Flinders
 
-* This project comes pre-configured for the MAX78000EVKIT.  See [Board Support Packages](https://analogdevicesinc.github.io/msdk/USERGUIDE/#board-support-packages) in the UG for instructions on changing the target board. 
-* Setting the "DEBUG" flag to 1 in project.mk will configure TMR0 as an RTOS Stats Timer running at 32 kHz. Timer configuration is provided in FreeRTOS_Debug.c.
+This project was developed by Team Flinders for the MITRE eCTF competition. The implementation leverages the security features of the MAX78000 to create a robust and secure video decoder platform.
 
-## Required Connections
+## Hardware Requirements
 
-If using the MAX78000EVKIT (EvKit_V1):
--   Connect a USB cable between the PC and the CN1 (USB/PWR) connector.
--   Connect pins 1 and 2 (P0_1) of the JH1 (UART 0 EN) header.
--   Open a terminal application on the PC and connect to the EV kit's console UART at 115200, 8-N-1.
--   Close jumper JP1 (LED1 EN).
--   Close jumper JP2 (LED2 EN).
+This implementation is designed exclusively for:
+- MAX78000FTHR (FTHR_RevA)
 
-If using the MAX78000FTHR (FTHR_RevA)
--   Connect a USB cable between the PC and the CN1 (USB/PWR) connector.
--	Open a terminal application on the PC and connect to the EV kit's console UART at 115200, 8-N-1.
+## Prerequisites
 
-## Expected Output
+To build and run this project, you'll need:
 
-The Console UART of the device will output these messages:
+- [Analog Devices MSDK](https://analogdevicesinc.github.io/msdk/) installed
+- ARM GCC Toolchain
+- OpenOCD for programming
+- Visual Studio Code with MSDK extensions (for IDE support)
 
-```
--=- MAX78000 FreeRTOS (V10.2.0) Demo -=-
-SystemCoreClock = 60000000
-Starting scheduler.
-Uptime is 0x00000000 (0 seconds), tickless-idle is disabled
+## Security Features
 
-Enter 'help' to view a list of available commands.
-cmd>
-```
+### Secure Boot
+- Implements randomized boot delay to prevent timing-based attacks
+- Hardware RNG for cryptographic operations
 
-## Debugging
+### Runtime Protection
+- FreeRTOS task isolation
+- Secure I/O handling
 
-Some extra debug features are provided as recommended practice in FreeRTOS_Debug.c. These are based on recommendations from the FreeRTOS documentation. They include:
-- A timer setup using TMR0 as an RTOS Statistics timer to profile task runtime. 
-- A custom HardFaultHandler which copies CPU register state to C variables for viewing inside a debugger program. 
-  - This is useful to diagnose the system state at the moment the HardFault occured. 
+## Hardware Connections
 
-The statistics timer can be used by numerous RTOS Debug utilities which detect a kernel and use the kernel's profiling routines to output useful information to the user. A similar timer configuration could also be used for RTOS kernels other than FreeRTOS. Be aware that TMR0 may not behave properly when using Low-Power features -- for these use-cases a Low-Power timer on the device should be used.  
+For MAX78000FTHR (FTHR_RevA):
+- Connect a USB cable between the PC and the CN1 (USB/PWR) connector
+- Open a terminal application on the PC and connect to the EV kit's console UART at 115200, 8-N-1
 
-An example of using the HardFaultHandler can be observed by placing a privileged memory access (e.g. ```int y = *(uint32_t *)0xFFFFFFFF```) inside an RTOS task. The program counter will show as a C variable, which can be used with a Disassembly View to find the location of the HardFault. An image is provided below as an example:
+## Project Structure
 
-![Disassembly View in VSCode](img/HardFault.png)
+- `src/`: Source code files
+  - `main.c`: Main application entry point, secure boot implementation
+  - `FreeRTOS_hooks.c`: FreeRTOS hook implementations
+  - Other security and driver implementation files
+- `include/`: Header files
+  - `FreeRTOSConfig.h`: FreeRTOS security configuration
+- `.vscode/`: VS Code configuration files for build and debug
 
+## MITRE eCTF
+
+The MITRE Embedded Capture the Flag (eCTF) is a competition that challenges teams to design and implement a secure embedded system. This project represents Team Flinders' solution for the secure video decoder challenge.
+
+## License
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+Where other licensed code has been used, the licence relating to that
+overrides the Apache License, Version 2.0 that applies to all code
+written by Team Flinders.
