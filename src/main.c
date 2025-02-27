@@ -76,6 +76,29 @@ int main(void)
 {
     Board_Init();
 
+    // Security delay on boot to prevent bruteforce attacks
+    printf("Initialising boot processes\n\n");
+    for (volatile int i = 0; i < SystemCoreClock/10; i++) {
+        // This busy-wait loop should take approximately 1 second
+        if (i % (SystemCoreClock/50) == 0) {
+            printf(".");  // Print every ~20ms
+        }
+    }
+
+    printf("\n\n");
+    printf("*************************************************\n");
+    printf("*            Boot Sequence Completed            *\n");
+    printf("*            G'day from Team Flinders           *\n");
+    printf("*      MAX78000 powered by FreeRTOS (V%s)       *\n", tskKERNEL_VERSION_NUMBER);
+    printf("*************************************************\n");
+    printf("SystemCoreClock = %d\n", SystemCoreClock);
+    
+    // Add 1 second delay to prevent brute force attacks
+
+    
+    // Continue with the rest of your code
+    printf("Starting scheduler.\n");
+    
     /* Print banner (RTOS scheduler not running) */
     printf("\n-=- MAX78000 FreeRTOS (V%s) Demo -=-\n", tskKERNEL_VERSION_NUMBER);
     printf("SystemCoreClock = %d\n", SystemCoreClock);
