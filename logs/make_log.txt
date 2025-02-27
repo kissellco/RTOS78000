@@ -6,41 +6,52 @@ Loaded project.mk
 * - Report Issues: https://github.com/analogdevicesinc/msdk/issues
 * - Contributing: https://analogdevicesinc.github.io/msdk/CONTRIBUTING/
 ****************************************************************************
-- MKDIR /home/rhys/freeRTOS78000/build
 make -C /home/rhys/msdk/Libraries/FreeRTOS/ lib BUILD_DIR=/home/rhys/freeRTOS78000/build/FreeRTOS
 make[1]: Entering directory '/home/rhys/msdk/Libraries/FreeRTOS'
-- MKDIR /home/rhys/freeRTOS78000/build/FreeRTOS
-- CC Source/list.c
-- CC Source/queue.c
-- CC Source/tasks.c
-- CC Source/portable/GCC/ARM_CM4F/port.c
-- CC Source/timers.c
-- CC Source/croutine.c
-- CC Source/event_groups.c
-- CC Source/stream_buffer.c
-- CC Source/portable/MemMang/heap_4.c
-- AR /home/rhys/freeRTOS78000/build/FreeRTOS/librtos.a
+make[1]: Nothing to be done for 'lib'.
 make[1]: Leaving directory '/home/rhys/msdk/Libraries/FreeRTOS'
-- CC src/FreeRTOS_hooks.c
-- CC src/main.c
-- CC /home/rhys/msdk/Libraries/Boards/MAX78000/EvKit_V1/Source/board.c
-- CC /home/rhys/msdk/Libraries/MiscDrivers/stdio.c
-- CC /home/rhys/msdk/Libraries/MiscDrivers/LED/led.c
-- CC /home/rhys/msdk/Libraries/MiscDrivers/PushButton/pb.c
-- CC /home/rhys/msdk/Libraries/MiscDrivers/Display/tft_ssd2119.c
-- CC /home/rhys/msdk/Libraries/MiscDrivers/Touchscreen/tsc2046.c
-- CC /home/rhys/msdk/Libraries/MiscDrivers/Camera/camera.c
-- CC /home/rhys/msdk/Libraries/MiscDrivers/Camera/ov7692.c
-- CC /home/rhys/msdk/Libraries/MiscDrivers/Camera/sccb.c
-- CC /home/rhys/msdk/Libraries/FreeRTOS-Plus/Source/FreeRTOS-Plus-CLI/FreeRTOS_CLI.c
-- AS /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Source/GCC/startup_max78000.S
-- CC /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Source/heap.c
-- CC /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Source/system_max78000.c
 - LD /home/rhys/freeRTOS78000/build/max78000.elf
+/usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/bin/ld: /home/rhys/freeRTOS78000/build/tft_ssd2119.o: in function `MXC_TFT_SetBackGroundColor':
+/home/rhys/msdk/Libraries/MiscDrivers/Display/tft_ssd2119.c:976: multiple definition of `MXC_TFT_SetBackGroundColor'; /home/rhys/freeRTOS78000/build/tft_ili9341.o:/home/rhys/freeRTOS78000/src/tft_ili9341.c:605: first defined here
+/usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/bin/ld: /home/rhys/freeRTOS78000/build/tft_ssd2119.o: in function `MXC_TFT_SetPalette':
+/home/rhys/msdk/Libraries/MiscDrivers/Display/tft_ssd2119.c:1004: multiple definition of `MXC_TFT_SetPalette'; /home/rhys/freeRTOS78000/build/tft_ili9341.o:/home/rhys/freeRTOS78000/src/tft_ili9341.c:628: first defined here
+/usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/bin/ld: /home/rhys/freeRTOS78000/build/tft_ssd2119.o: in function `MXC_TFT_Backlight':
+/home/rhys/msdk/Libraries/MiscDrivers/Display/tft_ssd2119.c:1015: multiple definition of `MXC_TFT_Backlight'; /home/rhys/freeRTOS78000/build/tft_ili9341.o:/home/rhys/freeRTOS78000/src/tft_ili9341.c:631: first defined here
+/usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/bin/ld: /home/rhys/freeRTOS78000/build/tft_ssd2119.o: in function `MXC_TFT_Init':
+/home/rhys/msdk/Libraries/MiscDrivers/Display/tft_ssd2119.c:920: multiple definition of `MXC_TFT_Init'; /home/rhys/freeRTOS78000/build/tft_ili9341.o:/home/rhys/freeRTOS78000/src/tft_ili9341.c:535: first defined here
+/usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/bin/ld: /home/rhys/freeRTOS78000/build/tft_ssd2119.o: in function `MXC_TFT_ShowImage':
+/home/rhys/msdk/Libraries/MiscDrivers/Display/tft_ssd2119.c:1031: multiple definition of `MXC_TFT_ShowImage'; /home/rhys/freeRTOS78000/build/tft_ili9341.o:/home/rhys/freeRTOS78000/src/tft_ili9341.c:674: first defined here
+/usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/bin/ld: /home/rhys/freeRTOS78000/build/tft_ssd2119.o: in function `MXC_TFT_ShowImageCameraRGB565':
+/home/rhys/msdk/Libraries/MiscDrivers/Display/tft_ssd2119.c:1077: multiple definition of `MXC_TFT_ShowImageCameraRGB565'; /home/rhys/freeRTOS78000/build/tft_ili9341.o:/home/rhys/freeRTOS78000/src/tft_ili9341.c:688: first defined here
+/usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/bin/ld: /home/rhys/freeRTOS78000/build/tft_ssd2119.o: in function `MXC_TFT_ClearScreen':
+/home/rhys/msdk/Libraries/MiscDrivers/Display/tft_ssd2119.c:1159: multiple definition of `MXC_TFT_ClearScreen'; /home/rhys/freeRTOS78000/build/tft_ili9341.o:/home/rhys/freeRTOS78000/src/tft_ili9341.c:642: first defined here
+/usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/bin/ld: /home/rhys/freeRTOS78000/build/tft_ssd2119.o: in function `MXC_TFT_FillRect':
+/home/rhys/msdk/Libraries/MiscDrivers/Display/tft_ssd2119.c:1164: multiple definition of `MXC_TFT_FillRect'; /home/rhys/freeRTOS78000/build/tft_ili9341.o:/home/rhys/freeRTOS78000/src/tft_ili9341.c:647: first defined here
+/usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/bin/ld: /home/rhys/freeRTOS78000/build/tft_ssd2119.o: in function `MXC_TFT_WritePixel':
+/home/rhys/msdk/Libraries/MiscDrivers/Display/tft_ssd2119.c:1545: multiple definition of `MXC_TFT_WritePixel'; /home/rhys/freeRTOS78000/build/tft_ili9341.o:/home/rhys/freeRTOS78000/src/tft_ili9341.c:662: first defined here
+/usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/bin/ld: /home/rhys/freeRTOS78000/build/tft_ssd2119.o: in function `MXC_TFT_PrintPalette':
+/home/rhys/msdk/Libraries/MiscDrivers/Display/tft_ssd2119.c:1591: multiple definition of `MXC_TFT_PrintPalette'; /home/rhys/freeRTOS78000/build/tft_ili9341.o:/home/rhys/freeRTOS78000/src/tft_ili9341.c:733: first defined here
+/usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/bin/ld: /home/rhys/freeRTOS78000/build/tft_ssd2119.o: in function `MXC_TFT_ResetCursor':
+/home/rhys/msdk/Libraries/MiscDrivers/Display/tft_ssd2119.c:1660: multiple definition of `MXC_TFT_ResetCursor'; /home/rhys/freeRTOS78000/build/tft_ili9341.o:/home/rhys/freeRTOS78000/src/tft_ili9341.c:889: first defined here
+/usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/bin/ld: /home/rhys/freeRTOS78000/build/tft_ssd2119.o: in function `MXC_TFT_SetFont':
+/home/rhys/msdk/Libraries/MiscDrivers/Display/tft_ssd2119.c:1666: multiple definition of `MXC_TFT_SetFont'; /home/rhys/freeRTOS78000/build/tft_ili9341.o:/home/rhys/freeRTOS78000/src/tft_ili9341.c:893: first defined here
+/usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/bin/ld: /home/rhys/freeRTOS78000/build/tft_ssd2119.o: in function `MXC_TFT_Printf':
+/home/rhys/msdk/Libraries/MiscDrivers/Display/tft_ssd2119.c:1670: multiple definition of `MXC_TFT_Printf'; /home/rhys/freeRTOS78000/build/tft_ili9341.o:/home/rhys/freeRTOS78000/src/tft_ili9341.c:898: first defined here
+/usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/bin/ld: /home/rhys/freeRTOS78000/build/tft_ssd2119.o: in function `MXC_TFT_ConfigPrintf':
+/home/rhys/msdk/Libraries/MiscDrivers/Display/tft_ssd2119.c:1682: multiple definition of `MXC_TFT_ConfigPrintf'; /home/rhys/freeRTOS78000/build/tft_ili9341.o:/home/rhys/freeRTOS78000/src/tft_ili9341.c:905: first defined here
+/usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/bin/ld: /home/rhys/freeRTOS78000/build/tft_ssd2119.o: in function `MXC_TFT_PrintFont':
+/home/rhys/msdk/Libraries/MiscDrivers/Display/tft_ssd2119.c:1692: multiple definition of `MXC_TFT_PrintFont'; /home/rhys/freeRTOS78000/build/tft_ili9341.o:/home/rhys/freeRTOS78000/src/tft_ili9341.c:908: first defined here
+/usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/bin/ld: /home/rhys/freeRTOS78000/build/tft_ssd2119.o: in function `MXC_TFT_Print':
+/home/rhys/msdk/Libraries/MiscDrivers/Display/tft_ssd2119.c:1743: multiple definition of `MXC_TFT_Print'; /home/rhys/freeRTOS78000/build/tft_ili9341.o:/home/rhys/freeRTOS78000/src/tft_ili9341.c:933: first defined here
+/usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/bin/ld: /home/rhys/freeRTOS78000/build/tft_ssd2119.o: in function `MXC_TFT_ClearArea':
+/home/rhys/msdk/Libraries/MiscDrivers/Display/tft_ssd2119.c:1748: multiple definition of `MXC_TFT_ClearArea'; /home/rhys/freeRTOS78000/build/tft_ili9341.o:/home/rhys/freeRTOS78000/src/tft_ili9341.c:938: first defined here
+/usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/bin/ld: /home/rhys/freeRTOS78000/build/tft_ssd2119.o: in function `MXC_TFT_WriteReg':
+/home/rhys/msdk/Libraries/MiscDrivers/Display/tft_ssd2119.c:1795: multiple definition of `MXC_TFT_WriteReg'; /home/rhys/freeRTOS78000/build/tft_ili9341.o:/home/rhys/freeRTOS78000/src/tft_ili9341.c:943: first defined here
+/usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/bin/ld: /home/rhys/freeRTOS78000/build/tft_ssd2119.o: in function `MXC_TFT_SetRotation':
+/home/rhys/msdk/Libraries/MiscDrivers/Display/tft_ssd2119.c:967: multiple definition of `MXC_TFT_SetRotation'; /home/rhys/freeRTOS78000/build/tft_ili9341.o:/home/rhys/freeRTOS78000/src/tft_ili9341.c:580: first defined here
 Memory region         Used Size  Region Size  %age Used
              ROM:           0 B        64 KB      0.00%
-           FLASH:       42496 B       512 KB      8.11%
-            SRAM:       32228 B       128 KB     24.59%
-arm-none-eabi-size --format=berkeley /home/rhys/freeRTOS78000/build/max78000.elf
-   text	   data	    bss	    dec	    hex	filename
-  40232	   1840	  30812	  72884	  11cb4	/home/rhys/freeRTOS78000/build/max78000.elf
+           FLASH:       71168 B       512 KB     13.57%
+            SRAM:       32132 B       128 KB     24.51%
+collect2: error: ld returned 1 exit status
+make: *** [/home/rhys/msdk/Libraries/CMSIS/Device/Maxim/GCC/gcc.mk:659: /home/rhys/freeRTOS78000/build/max78000.elf] Error 1

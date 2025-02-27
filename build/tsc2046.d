@@ -1,5 +1,4 @@
-/home/rhys/freeRTOS78000/build/tsc2046.o: \
- /home/rhys/msdk/Libraries/MiscDrivers/Touchscreen/tsc2046.c \
+/home/rhys/freeRTOS78000/build/tsc2046.o: src/tsc2046.c \
  /usr/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h \
  /usr/lib/gcc/arm-none-eabi/13.2.1/include/stdbool.h \
  /usr/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
@@ -28,7 +27,7 @@
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_pins.h \
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/gpio.h \
  /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Include/gpio_regs.h \
- /home/rhys/msdk/Libraries/MiscDrivers/Touchscreen/tsc2046.h \
+ include/tsc2046.h \
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/spi.h \
  /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Include/spi_regs.h \
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_sys.h \

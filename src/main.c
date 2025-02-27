@@ -34,6 +34,8 @@
 #include "mxc_device.h"
 #include "uart.h"
 #include "lp.h"
+#include "led.h"
+#include "board.h"
 
 /* Explicitly disable tickless mode */
 unsigned int disable_tickless = 1;
@@ -72,9 +74,8 @@ void vTickTockTask(void *pvParameters)
  */
 int main(void)
 {
-    /* Setup the BSP */
     Board_Init();
-    
+
     /* Print banner (RTOS scheduler not running) */
     printf("\n-=- MAX78000 FreeRTOS (V%s) Demo -=-\n", tskKERNEL_VERSION_NUMBER);
     printf("SystemCoreClock = %d\n", SystemCoreClock);

@@ -27,14 +27,13 @@
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_pins.h \
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/gpio.h \
  /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Include/gpio_regs.h \
- /home/rhys/msdk/Libraries/Boards/MAX78000/EvKit_V1/Include/board.h \
- /usr/include/newlib/stdio.h \
+ include/board.h /usr/include/newlib/stdio.h \
  /usr/lib/gcc/arm-none-eabi/13.2.1/include/stdarg.h \
  /usr/include/newlib/sys/stdio.h \
- /home/rhys/msdk/Libraries/MiscDrivers/Display/tft_ssd2119.h \
+ /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Include/spi_regs.h \
+ include/tft_ili9341.h \
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/spi.h \
  /usr/lib/gcc/arm-none-eabi/13.2.1/include/stdbool.h \
- /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Include/spi_regs.h \
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_sys.h \
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_device.h \
  /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Include/lpgcr_regs.h \
@@ -42,10 +41,9 @@
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_assert.h \
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_lock.h \
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/gpio.h \
- /home/rhys/msdk/Libraries/MiscDrivers/Touchscreen/tsc2046.h \
- /home/rhys/msdk/Libraries/MiscDrivers/LED/led.h \
+ include/fonts.h include/tsc2046.h include/led.h \
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_assert.h \
- /home/rhys/msdk/Libraries/MiscDrivers/PushButton/pb.h \
+ include/board.h include/pb.h \
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/nvic_table.h \
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/pt.h \
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/pt.h \

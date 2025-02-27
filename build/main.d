@@ -51,14 +51,14 @@
  /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Include/lpcmp_regs.h \
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/tmr.h \
  /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Include/tmr_regs.h \
- /home/rhys/msdk/Libraries/Boards/MAX78000/EvKit_V1/Include/board.h \
- /home/rhys/msdk/Libraries/MiscDrivers/Display/tft_ssd2119.h \
- /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/spi.h \
+ include/led.h \
+ /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_assert.h \
+ include/board.h \
  /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Include/spi_regs.h \
+ include/tft_ili9341.h \
+ /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/spi.h \
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_assert.h \
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_lock.h \
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/gpio.h \
- /home/rhys/msdk/Libraries/MiscDrivers/Touchscreen/tsc2046.h \
- /home/rhys/msdk/Libraries/MiscDrivers/LED/led.h \
- /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_assert.h \
- /home/rhys/msdk/Libraries/MiscDrivers/PushButton/pb.h
+ include/fonts.h include/tsc2046.h include/led.h include/pb.h \
+ include/board.h
