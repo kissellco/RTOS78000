@@ -14,7 +14,9 @@
                 "path": [
                     "${default}"
                 ]
-            }
+            },
+            "cStandard": "c11",
+            "compilerArgs": ["-xc"]
         },
         {
             "name": "Linux",
@@ -30,7 +32,9 @@
                 "path": [
                     "${default}"
                 ]
-            }
+            },
+            "cStandard": "c11",
+            "compilerArgs": ["-xc"]
         },
         {
             "name": "Mac",
@@ -46,8 +50,10 @@
                 "path": [
                     "${default}"
                 ]
-            }
-        }
+            },
+            "cStandard": "c11",
+            "compilerArgs": ["-xc"]
+        },
     ],
     "version": 4
 }

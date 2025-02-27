@@ -36,6 +36,7 @@
 #include "semphr.h"
 
 // MAX78000 inclusions
+#include <max78000.h>
 #include "board.h"
 #include "mxc_device.h"
 #include "uart.h"
@@ -43,6 +44,7 @@
 #include "led.h"
 #include "trng.h"
 #include "tmr.h"
+
 
 /* Explicitly disable tickless mode */
 unsigned int disable_tickless = 1;
@@ -134,13 +136,11 @@ int main(void)
     printf("SystemCoreClock = %d\n\n", SystemCoreClock);
     
     printf("Security delay: %.2f ms (target: %.2f ms)\n\n", actual_delay_ms, expected_delay_ms);
-    
-    // Continue with the rest of your code
-    printf("Starting scheduler.\n");
-    
-    /* Print banner (RTOS scheduler not running) */
-    printf("\n-=- MAX78000 FreeRTOS (V%s) Demo -=-\n", tskKERNEL_VERSION_NUMBER);
     printf("SystemCoreClock = %d\n", SystemCoreClock);
+
+    // Continue with the rest of your code
+    printf("Creating tasks...\n");
+    
 
     /* Create the TickTock task */
     if (xTaskCreate(vTickTockTask, "TickTock", 2 * configMINIMAL_STACK_SIZE,

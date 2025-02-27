@@ -10,11 +10,44 @@ make -C /home/rhys/msdk/Libraries/FreeRTOS/ lib BUILD_DIR=/home/rhys/freeRTOS780
 make[1]: Entering directory '/home/rhys/msdk/Libraries/FreeRTOS'
 make[1]: Nothing to be done for 'lib'.
 make[1]: Leaving directory '/home/rhys/msdk/Libraries/FreeRTOS'
-- LD /home/rhys/freeRTOS78000/build/max78000.elf
-Memory region         Used Size  Region Size  %age Used
-             ROM:           0 B        64 KB      0.00%
-           FLASH:       71168 B       512 KB     13.57%
-            SRAM:       32132 B       128 KB     24.51%
-arm-none-eabi-size --format=berkeley /home/rhys/freeRTOS78000/build/max78000.elf
-   text	   data	    bss	    dec	    hex	filename
-  68828	   1840	  30792	 101460	  18c54	/home/rhys/freeRTOS78000/build/max78000.elf
+- CC src/main.c
+src/main.c: In function 'main':
+src/main.c:88:5: error: implicit declaration of function 'MXC_TRNG_Enable'; did you mean 'MXC_TRNG_EnableInt'? [-Werror=implicit-function-declaration]
+   88 |     MXC_TRNG_Enable();
+      |     ^~~~~~~~~~~~~~~
+      |     MXC_TRNG_EnableInt
+src/main.c:92:21: warning: passing argument 1 of 'MXC_TRNG_Random' from incompatible pointer type [-Wincompatible-pointer-types]
+   92 |     MXC_TRNG_Random(&random_value, sizeof(random_value));
+      |                     ^~~~~~~~~~~~~
+      |                     |
+      |                     uint32_t * {aka long unsigned int *}
+In file included from src/main.c:45:
+/home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/trng.h:102:30: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint32_t *' {aka 'long unsigned int *'}
+  102 | int MXC_TRNG_Random(uint8_t *data, uint32_t len);
+      |                     ~~~~~~~~~^~~~
+src/main.c:112:9: error: redefinition of 'base_delay'
+  112 |     int base_delay = SystemCoreClock/10;
+      |         ^~~~~~~~~~
+src/main.c:93:9: note: previous definition of 'base_delay' with type 'int'
+   93 |     int base_delay = SystemCoreClock/10; // Calculate base delay (1000ms worth of cycles)
+      |         ^~~~~~~~~~
+src/main.c:113:9: error: redefinition of 'random_factor'
+  113 |     int random_factor = (rand() % 200) - 100;  // -100 to +100
+      |         ^~~~~~~~~~~~~
+src/main.c:94:9: note: previous definition of 'random_factor' with type 'int'
+   94 |     int random_factor = (random_value % 200) * -1; // Use random value to generate number between 0 and 200
+      |         ^~~~~~~~~~~~~
+src/main.c:114:9: error: redefinition of 'delay_cycles'
+  114 |     int delay_cycles = base_delay + (base_delay * random_factor / 1000);  // +/- 10%
+      |         ^~~~~~~~~~~~
+src/main.c:95:9: note: previous definition of 'delay_cycles' with type 'int'
+   95 |     int delay_cycles = base_delay + (base_delay * random_factor / 1000); // Calculate final delay (between 80% and 100% of base_delay)
+      |         ^~~~~~~~~~~~
+src/main.c:138:61: warning: implicit conversion from 'float' to 'double' when passing argument to function [-Wdouble-promotion]
+  138 |     printf("Security delay: %.2f ms (target: %.2f ms)\n\n", actual_delay_ms, expected_delay_ms);
+      |                                                             ^~~~~~~~~~~~~~~
+src/main.c:138:78: warning: implicit conversion from 'float' to 'double' when passing argument to function [-Wdouble-promotion]
+  138 |     printf("Security delay: %.2f ms (target: %.2f ms)\n\n", actual_delay_ms, expected_delay_ms);
+      |                                                                              ^~~~~~~~~~~~~~~~~
+cc1: some warnings being treated as errors
+make: *** [/home/rhys/msdk/Libraries/CMSIS/Device/Maxim/GCC/gcc.mk:542: /home/rhys/freeRTOS78000/build/main.o] Error 1

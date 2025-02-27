@@ -10,8 +10,10 @@
  /usr/include/newlib/sys/_types.h /usr/include/newlib/machine/_types.h \
  /usr/include/newlib/sys/lock.h /usr/include/newlib/sys/stdio.h \
  /usr/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
- /usr/include/newlib/string.h /usr/include/newlib/sys/_locale.h \
- /usr/include/newlib/strings.h /usr/include/newlib/sys/string.h \
+ /usr/include/newlib/stdlib.h /usr/include/newlib/machine/stdlib.h \
+ /usr/include/newlib/alloca.h /usr/include/newlib/string.h \
+ /usr/include/newlib/sys/_locale.h /usr/include/newlib/strings.h \
+ /usr/include/newlib/sys/string.h \
  /home/rhys/msdk/Libraries/FreeRTOS//Source/include/FreeRTOS.h \
  include/FreeRTOSConfig.h \
  /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Include/max78000.h \
@@ -32,18 +34,28 @@
  /home/rhys/msdk/Libraries/FreeRTOS//Source/include/semphr.h \
  /home/rhys/msdk/Libraries/FreeRTOS//Source/include/queue.h \
  /home/rhys/msdk/Libraries/FreeRTOS//Source/include/task.h \
+ include/board.h \
+ /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Include/spi_regs.h \
+ /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Include/gpio_regs.h \
+ include/tft_ili9341.h \
+ /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/spi.h \
+ /usr/lib/gcc/arm-none-eabi/13.2.1/include/stdbool.h \
+ /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_sys.h \
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_device.h \
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_errors.h \
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_pins.h \
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/gpio.h \
- /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Include/gpio_regs.h \
- /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/uart.h \
- /usr/lib/gcc/arm-none-eabi/13.2.1/include/stdbool.h \
- /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Include/uart_regs.h \
- /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_sys.h \
- /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_device.h \
  /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Include/lpgcr_regs.h \
  /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Include/gcr_regs.h \
+ /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_assert.h \
+ /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_lock.h \
+ /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/gpio.h \
+ include/fonts.h include/tsc2046.h include/led.h \
+ /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_assert.h \
+ include/board.h include/pb.h \
+ /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_device.h \
+ /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/uart.h \
+ /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Include/uart_regs.h \
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/lp.h \
  /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Include/pwrseq_regs.h \
  /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Include/mcr_regs.h \
@@ -52,13 +64,6 @@
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/tmr.h \
  /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Include/tmr_regs.h \
  include/led.h \
- /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_assert.h \
- include/board.h \
- /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Include/spi_regs.h \
- include/tft_ili9341.h \
- /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/spi.h \
- /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_assert.h \
- /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_lock.h \
- /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/gpio.h \
- include/fonts.h include/tsc2046.h include/led.h include/pb.h \
- include/board.h
+ /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/trng.h \
+ /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Include/trng_regs.h \
+ /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/tmr.h
