@@ -14,6 +14,11 @@
         "MAXIM_PATH":"/home/rhys/msdk"
     },
     
+
+    "MAXIM_PATH": "/home/rhys/msdk",
+    "update.mode": "manual",
+    "extensions.autoUpdate": false,
+
     "target":"MAX78000",
     "board":"EvKit_V1",
 

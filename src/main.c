@@ -34,7 +34,6 @@
 #include "mxc_device.h"
 #include "uart.h"
 #include "lp.h"
-#include "board.h"
 
 /* Explicitly disable tickless mode */
 unsigned int disable_tickless = 1;
