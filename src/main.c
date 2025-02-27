@@ -25,17 +25,24 @@
 
 #include <stdio.h>
 #include <stdint.h>
+#include <stdlib.h>
 #include <string.h>
+
+// FreeRTOS inclusions
 #include "FreeRTOS.h"
 #include "FreeRTOSConfig.h"
 #include "portmacro.h"
 #include "task.h"
 #include "semphr.h"
+
+// MAX78000 inclusions
+#include "board.h"
 #include "mxc_device.h"
 #include "uart.h"
 #include "lp.h"
 #include "led.h"
-#include "board.h"
+#include "trng.h"
+#include "tmr.h"
 
 /* Explicitly disable tickless mode */
 unsigned int disable_tickless = 1;
@@ -75,26 +82,58 @@ void vTickTockTask(void *pvParameters)
 int main(void)
 {
     Board_Init();
+    MXC_TRNG_Init();
+    MXC_TRNG_Enable();
+
+    // Security delay on boot from 800ms to 1000ms
+    uint32_t random_value;
+    MXC_TRNG_Random(&random_value, sizeof(random_value));
+    int base_delay = SystemCoreClock/10; // Calculate base delay (1000ms worth of cycles)
+    int random_factor = (random_value % 200) * -1; // Use random value to generate number between 0 and 200
+    int delay_cycles = base_delay + (base_delay * random_factor / 1000); // Calculate final delay (between 80% and 100% of base_delay)
+    float expected_delay_ms = (float)delay_cycles / (SystemCoreClock / 1000); // Estimate actual time taken to boot
+
+    // Measure boot delay
+    mxc_tmr_cfg_t tmr_cfg;
+    tmr_cfg.pres = TMR_PRES_1;
+    tmr_cfg.mode = TMR_MODE_CONTINUOUS;
+    tmr_cfg.cmp_cnt = 0xFFFFFFFF;  // Set to max value
+    tmr_cfg.pol = 0;
+
+    // Initialise timer
+    MXC_TMR_Init(MXC_TMR0, &tmr_cfg, false);
+    MXC_TMR_SetCount(MXC_TMR0, 0);
+    MXC_TMR_Start(MXC_TMR0);
 
     // Security delay on boot to prevent bruteforce attacks
-    printf("Initialising boot processes\n\n");
-    for (volatile int i = 0; i < SystemCoreClock/10; i++) {
-        // This busy-wait loop should take approximately 1 second
-        if (i % (SystemCoreClock/50) == 0) {
-            printf(".");  // Print every ~20ms
+    printf("Initialising secure boot process\n\n");
+    int base_delay = SystemCoreClock/10;
+    int random_factor = (rand() % 200) - 100;  // -100 to +100
+    int delay_cycles = base_delay + (base_delay * random_factor / 1000);  // +/- 10%
+    
+    for (volatile int i = 0; i < delay_cycles; i++) {
+        if (i % (delay_cycles/50) == 0) {
+            printf(".");
         }
     }
 
+    // Stop the timer and get the count
+    MXC_TMR_Stop(MXC_TMR0);
+    uint32_t timer_count = MXC_TMR_GetCount(MXC_TMR0);
+    
+    // Calculate actual delay in milliseconds
+    float actual_delay_ms = (float)timer_count / (SystemCoreClock / 1000);
+
+    
     printf("\n\n");
     printf("*************************************************\n");
     printf("*            Boot Sequence Completed            *\n");
     printf("*            G'day from Team Flinders           *\n");
     printf("*      MAX78000 powered by FreeRTOS (V%s)       *\n", tskKERNEL_VERSION_NUMBER);
     printf("*************************************************\n");
-    printf("SystemCoreClock = %d\n", SystemCoreClock);
+    printf("SystemCoreClock = %d\n\n", SystemCoreClock);
     
-    // Add 1 second delay to prevent brute force attacks
-
+    printf("Security delay: %.2f ms (target: %.2f ms)\n\n", actual_delay_ms, expected_delay_ms);
     
     // Continue with the rest of your code
     printf("Starting scheduler.\n");
