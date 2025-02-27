@@ -1,0 +1,1 @@
+openocd -s ../msdk/Tools/OpenOCD/scripts/ -f interface/cmsis-dap.cfg -f target/max78000.cfg -c "init; reset halt; max32xxx mass_erase 0; program bin/insecure.bin verify 0x10000000; verify reset exit" > logs/flash_log.txt 2>&1
