@@ -85,10 +85,9 @@ int main(void)
 {
     Board_Init();
     MXC_TRNG_Init();
-    MXC_TRNG_Enable();
 
     // Security delay on boot from 800ms to 1000ms
-    uint32_t random_value;
+    uint8_t random_value;
     MXC_TRNG_Random(&random_value, sizeof(random_value));
     int base_delay = SystemCoreClock/10; // Calculate base delay (1000ms worth of cycles)
     int random_factor = (random_value % 200) * -1; // Use random value to generate number between 0 and 200
@@ -109,10 +108,6 @@ int main(void)
 
     // Security delay on boot to prevent bruteforce attacks
     printf("Initialising secure boot process\n\n");
-    int base_delay = SystemCoreClock/10;
-    int random_factor = (rand() % 200) - 100;  // -100 to +100
-    int delay_cycles = base_delay + (base_delay * random_factor / 1000);  // +/- 10%
-    
     for (volatile int i = 0; i < delay_cycles; i++) {
         if (i % (delay_cycles/50) == 0) {
             printf(".");
@@ -131,12 +126,12 @@ int main(void)
     printf("*************************************************\n");
     printf("*            Boot Sequence Completed            *\n");
     printf("*            G'day from Team Flinders           *\n");
-    printf("*      MAX78000 powered by FreeRTOS (V%s)       *\n", tskKERNEL_VERSION_NUMBER);
+    printf("*          MAX78000 powered by FreeRTOS         *\n");
+    printf("*                     (%s)                      *\n", tskKERNEL_VERSION_NUMBER);
     printf("*************************************************\n");
-    printf("SystemCoreClock = %d\n\n", SystemCoreClock);
+    printf("SystemCoreClock = %d Hz\n\n", SystemCoreClock);
     
     printf("Security delay: %.2f ms (target: %.2f ms)\n\n", actual_delay_ms, expected_delay_ms);
-    printf("SystemCoreClock = %d\n", SystemCoreClock);
 
     // Continue with the rest of your code
     printf("Creating tasks...\n");
