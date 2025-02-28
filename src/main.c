@@ -125,7 +125,7 @@ int main(void)
     }
 
     /* Start scheduler */
-    printf("Starting scheduler.\n");
+    printf("Starting scheduler...\n\n");
     vTaskStartScheduler();
 
     /* This code is only reached if the scheduler failed to start */

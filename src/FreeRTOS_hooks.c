@@ -15,10 +15,6 @@
 /* Required for heap_4.c */
 uint8_t ucHeap[configTOTAL_HEAP_SIZE];
 
-/* Global variables to store boot timing information */
-float g_actual_delay_ms = 0.0f;
-float g_expected_delay_ms = 0.0f;
-
 /* Called if a call to pvPortMalloc() fails */
 void vApplicationMallocFailedHook(void)
 {
@@ -27,9 +23,7 @@ void vApplicationMallocFailedHook(void)
     
     /* Visual indication - rapidly flash red LED */
     while (1) {
-        LED_On(LED_RED);
-        MXC_Delay(MXC_DELAY_MSEC(100));
-        LED_Off(LED_RED);
+        LED_Toggle(LED_RED);
         MXC_Delay(MXC_DELAY_MSEC(100));
     }
 }
@@ -97,25 +91,25 @@ void vApplicationDaemonTaskStartupHook(void)
     printf("*            Boot Sequence Completed            *\n");
     printf("*            G'day from Team Flinders           *\n");
     printf("*          MAX78000 powered by FreeRTOS         *\n");
-    printf("*                     (%s)                      *\n", tskKERNEL_VERSION_NUMBER);
+    printf("*                     (%s)                   *\n", tskKERNEL_VERSION_NUMBER);
     printf("*************************************************\n");
-    printf("SystemCoreClock = %d Hz\n\n", SystemCoreClock);
+    printf("System Clock = %d MHz\n\n", (SystemCoreClock * 0.000001));
     
     /* Display boot timing information */
-    printf("Security delay: %.2f ms (target: %.2f ms)\n\n", g_actual_delay_ms, g_expected_delay_ms);
+    printf("Security delay: %.2f ms\n\n", actual_delay_ms);
     
     /* Display system information */
     printf("FreeRTOS Information:\n");
     printf("  Total Heap Size: %d bytes\n", configTOTAL_HEAP_SIZE);
     printf("  Free Heap: %d bytes\n", xPortGetFreeHeapSize());
     printf("  Minimum Ever Free Heap: %d bytes\n", xPortGetMinimumEverFreeHeapSize());
-    printf("  Number of Tasks: %d\n", uxTaskGetNumberOfTasks());
+    printf("  Number of Tasks: %d\n\n", uxTaskGetNumberOfTasks());
     
     /* Indicate successful boot with a green LED */
     LED_Off(LED_RED);
     LED_On(LED_GREEN);
     
-    printf("System initialisation complete. Running tasks...\n\n");
+    printf("System initialisation complete! \n Running tasks...\n\n");
 }
 
 /* Static memory for idle task */
