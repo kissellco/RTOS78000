@@ -12,7 +12,7 @@
 // Clocks
 #define configCPU_CLOCK_HZ                                          ((uint32_t)IPO_FREQ)
 #define configRTC_TICK_RATE_HZ                                      (32768) //Set to realtime clock oscillator
-#define configTICK_RATE_HZ                                          ((portTickType)2000) // Improves time resolution
+#define configTICK_RATE_HZ                                          ((portTickType)1000) // Improves time resolution
 
 // Diagnostics
 #define configUSE_TRACE_FACILITY                                    1

@@ -10,16 +10,11 @@ make -C /home/rhys/msdk/Libraries/FreeRTOS/ lib BUILD_DIR=/home/rhys/freeRTOS780
 make[1]: Entering directory '/home/rhys/msdk/Libraries/FreeRTOS'
 make[1]: Nothing to be done for 'lib'.
 make[1]: Leaving directory '/home/rhys/msdk/Libraries/FreeRTOS'
-- CC src/FreeRTOS_hooks.c
-src/FreeRTOS_hooks.c: In function 'vApplicationDaemonTaskStartupHook':
-src/FreeRTOS_hooks.c:109:57: warning: implicit conversion from 'float' to 'double' when passing argument to function [-Wdouble-promotion]
-  109 |         tskKERNEL_VERSION_NUMBER, (configTICK_RATE_HZ), actual_delay_ms,
-      |                                                         ^~~~~~~~~~~~~~~
 - LD /home/rhys/freeRTOS78000/build/max78000.elf
 Memory region         Used Size  Region Size  %age Used
              ROM:           0 B        64 KB      0.00%
            FLASH:       81408 B       512 KB     15.53%
-            SRAM:       32724 B       128 KB     24.97%
+            SRAM:       32732 B       128 KB     24.97%
 arm-none-eabi-size --format=berkeley /home/rhys/freeRTOS78000/build/max78000.elf
    text	   data	    bss	    dec	    hex	filename
-  79180	   1840	  31272	 112292	  1b6a4	/home/rhys/freeRTOS78000/build/max78000.elf
+  79172	   1848	  31272	 112292	  1b6a4	/home/rhys/freeRTOS78000/build/max78000.elf

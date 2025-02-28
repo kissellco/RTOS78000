@@ -49,12 +49,12 @@ void vApplicationDaemonTaskStartupHook(void) {
     MXC_TRNG_Init();
     LED_Init();
 
-    // Security delay on boot from 800ms to 1000ms
+    // Security delay on boot
     uint8_t random_value;
     MXC_TRNG_Random(&random_value, sizeof(random_value));
-    int base_delay = SystemCoreClock / 10;  // Calculate base delay (1000ms worth of cycles)
-    int random_factor = (random_value % 200) * -1;  // Use random value to generate number between 0 and 200
-    int delay_cycles = base_delay + (base_delay * random_factor / 1000);  // Calculate final delay (between 80% and 100% of base_delay)
+    int base_delay = SystemCoreClock / 10;
+    int random_factor = (random_value % 100);
+    int delay_cycles = base_delay - (base_delay * random_factor / 1000);  // Calculate final delay (between 80% and 100% of base_delay)
 
     // Measure boot delay
     mxc_tmr_cfg_t tmr_cfg;
@@ -70,8 +70,8 @@ void vApplicationDaemonTaskStartupHook(void) {
 
     // Security delay on boot to prevent bruteforce attacks
     for (volatile int i = 0; i < delay_cycles; i++) {
-        if (i % (delay_cycles / 10) == 0) {
-            return 1;
+        if (i % (delay_cycles / 25) == 0) {
+            printf(".");
         }
     }
 
@@ -83,12 +83,11 @@ void vApplicationDaemonTaskStartupHook(void) {
     float actual_delay_ms = (float)timer_count / (SystemCoreClock / 1000);
 
     // Create a buffer to hold the entire formatted string
-    char message[2048];  // Adjust size based on the expected output length
-    char task_list[512];
+    char task_list[1024];
     vTaskList(task_list);
 
     // Build the message in the buffer using snprintf
-    snprintf(message, sizeof(message),
+    printf(
              "\n\n*************************************************\n"
              "*            Boot Sequence Completed            *\n"
              "*            G'day from Team Flinders           *\n"
@@ -96,27 +95,27 @@ void vApplicationDaemonTaskStartupHook(void) {
              "*                     %s                   *\n"
              "*************************************************\n"
              "Tick Rate = %d Hz\n\n"
-             "Security delay: %.2f ms\n\n"
+             "Security delay: %f ms\n\n"
              "FreeRTOS Information:\n"
              "  Total Heap Size: %d bytes\n"
              "  Free Heap: %d bytes\n"
              "  Minimum Ever Free Heap: %d bytes\n"
-             "  Number of Tasks: %d\n\n"
+             "  Number of Tasks: %d\n\n",
+             tskKERNEL_VERSION_NUMBER,          // Version string
+             configTICK_RATE_HZ,                // Tick rate
+             actual_delay_ms,                      // Security delay
+             configTOTAL_HEAP_SIZE,             // Total heap size
+             xPortGetFreeHeapSize(),            // Free heap
+             xPortGetMinimumEverFreeHeapSize(), // Min free heap
+             uxTaskGetNumberOfTasks()           // Number of tasks
+    );
+    printf(
              "Task Name       State   Prio    Stack   Task#\n"
              "---------------------------------------------\n"
              "%s\n"
              "System initialisation complete!\n\n",
-             tskKERNEL_VERSION_NUMBER,              // Version string
-             configTICK_RATE_HZ,                    // Tick rate
-             actual_delay_ms,                       // Security delay
-             configTOTAL_HEAP_SIZE,                 // Total heap size
-             xPortGetFreeHeapSize(),                // Free heap
-             xPortGetMinimumEverFreeHeapSize(),     // Min free heap
-             uxTaskGetNumberOfTasks(),              // Number of tasks
-             task_list);                            // Task list
-
-    // Print the complete message in one go
-    printf("%s", message);
+             task_list
+    );
 
     // Indicate successful boot with a green LED
     LED_Off(LED_RED);
