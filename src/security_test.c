@@ -62,27 +62,18 @@ void stackOverflowTask_vMainTask(void *pvParameters) {
 /**
  * @brief Initialise the malloc failure test task
  */
-void mallocFailTask_Init(void) {
-    printf("[Malloc Test] Task initialising...\n");
-}
-
-/**
- * @brief Test task that causes a malloc failure
- * @details This task intentionally causes a malloc failure by allocating
- * memory in a loop until the heap is exhausted
- */
 void mallocFailTask_vMainTask(void *pvParameters) {
     printf("[Malloc Test] Task started. This will exhaust the heap...\n");
     
-    // Keep track of allocations
-    void *ptrArray[512]; // Pointers to allocated memory
+    // Use static array instead of stack array to avoid stack overflow
+    static void *ptrArray[250]; // Reduced size, static allocation
     int allocCount = 0;   // Number of successful allocations
     
     printf("[Malloc Test] Starting memory allocations...\n");
     printf("[Malloc Test] Initial free heap: %d bytes\n", xPortGetFreeHeapSize());
     
     // Allocate memory in chunks until failure
-    size_t chunkSize = 512; // 1KB chunks
+    size_t chunkSize = 1024; // 1KB chunks
     while (1) {
         // Try to allocate a chunk of memory
         void *ptr = pvPortMalloc(chunkSize);
@@ -116,9 +107,19 @@ void mallocFailTask_vMainTask(void *pvParameters) {
         if (allocCount % 5 == 0) {
             printf("[Malloc Test] Allocated %d chunks (%d bytes), free heap: %d bytes\n", 
                     allocCount, allocCount * chunkSize, xPortGetFreeHeapSize());
+            
+            // Instead of vTaskDelay, use a short busy-wait
+            for (volatile int i = 0; i < 10000; i++) {
+                __NOP();
+            }
         }
     }
     
     // This point should never be reached
     printf("[Malloc Test] Task ending (this should never be printed)\n");
+    
+    // Instead of vTaskDelete, just loop forever
+    while (1) {
+        __NOP();
+    }
 }
