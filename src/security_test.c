@@ -74,62 +74,52 @@ void mallocFailTask_Init(void) {
 void mallocFailTask_vMainTask(void *pvParameters) {
     printf("[Malloc Test] Task started. This will exhaust the heap...\n");
     
-    // Use static array instead of stack array to avoid stack overflow
-    static void *ptrArray[1000]; // Reduced size, static allocation
-    int allocCount = 0;   // Number of successful allocations
+    // Use a more careful approach to exhaust the heap
+    int allocCount = 0;
+    size_t chunkSize = 512; // Smaller chunks
+    size_t totalAllocated = 0;
+    void *ptr = NULL;
     
-    printf("[Malloc Test] Starting memory allocations...\n");
     printf("[Malloc Test] Initial free heap: %d bytes\n", xPortGetFreeHeapSize());
     
-    // Allocate memory in chunks until failure
-    size_t chunkSize = 1024; // 1KB chunks
-    while (1) {
+    // Allocate just enough to leave a small amount of heap space
+    size_t targetHeapSpace = 128; // Leave 128 bytes free
+    size_t currentFreeHeap = xPortGetFreeHeapSize();
+    
+    while (currentFreeHeap > (targetHeapSpace + chunkSize)) {
         // Try to allocate a chunk of memory
-        void *ptr = pvPortMalloc(chunkSize);
+        ptr = pvPortMalloc(chunkSize);
         
         if (ptr == NULL) {
-            // Allocation failed, heap is exhausted
-            printf("[Malloc Test] Allocation failed after %d allocations\n", allocCount);
-            printf("[Malloc Test] Final free heap: %d bytes\n", xPortGetFreeHeapSize());
-            
-            // The next allocation will trigger the MallocFailedHook
-            printf("[Malloc Test] Triggering MallocFailedHook...\n");
-            // Prevent compiler warning by using the result of pvPortMalloc
-            volatile void *finalPtr = pvPortMalloc(64); // Small allocation to trigger the hook
-            (void)finalPtr; // Further silences compiler warnings
-            
-            // This point should never be reached
-            printf("[Malloc Test] Still running (this should never be printed)\n");
-            break;
+            break; // Stop if allocation fails
         }
         
-        // Fill the memory to ensure it's not optimized away
-        memset(ptr, 0xBB, chunkSize);
+        // Fill the memory to ensure it's not optimized away (just first byte is enough)
+        *((volatile uint8_t*)ptr) = 0xBB;
         
-        // Save the pointer
-        if (allocCount < sizeof(ptrArray)/sizeof(ptrArray[0])) {
-            ptrArray[allocCount] = ptr;
-        }
-        
-        // Increment allocation count
         allocCount++;
+        totalAllocated += chunkSize;
+        currentFreeHeap = xPortGetFreeHeapSize();
         
-        // Print progress periodically
-        if (allocCount % 5 == 0) {
-            printf("[Malloc Test] Allocated %d chunks (%d bytes), free heap: %d bytes\n", 
-                    allocCount, allocCount * chunkSize, xPortGetFreeHeapSize());
-            
-            // Instead of vTaskDelay, use a short busy-wait
-            for (volatile int i = 0; i < 10000; i++) {
-                __NOP();
-            }
+        // Print progress less frequently
+        if (allocCount % 10 == 0) {
+            printf("[Malloc Test] Allocated %d bytes, free heap: %d bytes\n", 
+                   totalAllocated, currentFreeHeap);
         }
     }
+    
+    printf("[Malloc Test] Heap nearly exhausted after %d allocations\n", allocCount);
+    printf("[Malloc Test] Final free heap: %d bytes\n", xPortGetFreeHeapSize());
+    
+    // Now deliberately trigger the malloc failed hook with a request larger than remaining heap
+    printf("[Malloc Test] Triggering MallocFailedHook...\n");
+    volatile void *finalPtr = pvPortMalloc(currentFreeHeap + 10);
+    (void)finalPtr;
     
     // This point should never be reached
     printf("[Malloc Test] Task ending (this should never be printed)\n");
     
-    // Instead of vTaskDelete, just loop forever
+    // Loop forever - should never get here
     while (1) {
         __NOP();
     }
