@@ -115,7 +115,7 @@ void vApplicationDaemonTaskStartupHook(void)
     LED_Off(LED_RED);
     LED_On(LED_GREEN);
     
-    printf("System initialisation complete! \nRunning tasks...\n\n");
+    printf("System initialisation complete!\n\n");
 }
 
 /* Static memory for idle task */
