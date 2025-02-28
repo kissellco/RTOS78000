@@ -70,7 +70,6 @@ void vApplicationDaemonTaskStartupHook(void)
     MXC_TMR_Start(MXC_TMR0);
 
     // Security delay on boot to prevent bruteforce attacks
-    printf("Initialising hardened boot process\n\n");
     for (volatile int i = 0; i < delay_cycles; i++) {
         if (i % (delay_cycles/10) == 0) {
             printf(".");
@@ -85,37 +84,36 @@ void vApplicationDaemonTaskStartupHook(void)
     float actual_delay_ms = (float)timer_count / (SystemCoreClock / 1000);
     
     /* Display boot information and welcome message */
-    printf("\n\n");
-    printf("*************************************************\n");
-    printf("*            Boot Sequence Completed            *\n");
-    printf("*            G'day from Team Flinders           *\n");
-    printf("*          MAX78000 powered by FreeRTOS         *\n");
-    printf("*                     %s                   *\n", tskKERNEL_VERSION_NUMBER);
-    printf("*************************************************\n");
-    printf("System Clock = %d MHz\n\n", (SystemCoreClock / 100000));
-    
-    /* Display boot timing information */
-    printf("Security delay: %.2f ms\n\n", actual_delay_ms);
-    
-    /* Display system information */
-    printf("FreeRTOS Information:\n");
-    printf("  Total Heap Size: %d bytes\n", configTOTAL_HEAP_SIZE);
-    printf("  Free Heap: %d bytes\n", xPortGetFreeHeapSize());
-    printf("  Minimum Ever Free Heap: %d bytes\n", xPortGetMinimumEverFreeHeapSize());
-    printf("  Number of Tasks: %d\n\n", uxTaskGetNumberOfTasks());
-
-    printf("  Running Tasks: \n\n");
     char task_list[1024];
     vTaskList(task_list);
-    printf("Task Name       State   Prio    Stack   Task#\n");
-    printf("---------------------------------------------\n");
-    printf("%s\n", task_list);
+    
+    printf(
+        "\n\n"
+        "*************************************************\n"
+        "*            Boot Sequence Completed            *\n"
+        "*            G'day from Team Flinders           *\n"
+        "*          MAX78000 powered by FreeRTOS         *\n"
+        "*                     %s                   *\n"
+        "*************************************************\n"
+        "Tick Rate = %d Hz\n\n"
+        "Security delay: %.2f ms\n\n"
+        "FreeRTOS Information:\n"
+        "  Total Heap Size: %d bytes\n"
+        "  Free Heap: %d bytes\n"
+        "  Minimum Ever Free Heap: %d bytes\n"
+        "  Number of Tasks: %d\n\n",
+        "Task Name       State   Prio    Stack   Task#\n"
+        "---------------------------------------------\n"
+        "%s\n"
+        "System initialisation complete!\n\n", 
+        tskKERNEL_VERSION_NUMBER, (configTICK_RATE_HZ), actual_delay_ms, 
+        configTOTAL_HEAP_SIZE, xPortGetFreeHeapSize(), xPortGetMinimumEverFreeHeapSize(), 
+        uxTaskGetNumberOfTasks(), task_list
+    );
     
     /* Indicate successful boot with a green LED */
     LED_Off(LED_RED);
     LED_On(LED_GREEN);
-    
-    printf("System initialisation complete!\n\n");
 }
 
 /* Static memory for idle task */
