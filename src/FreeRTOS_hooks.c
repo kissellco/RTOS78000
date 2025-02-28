@@ -79,7 +79,7 @@ void vApplicationDaemonTaskStartupHook(void) {
     uint32_t timer_count = MXC_TMR_GetCount(MXC_TMR0);
 
     // Calculate actual delay in milliseconds
-    float actual_delay_ms = ((float)timer_count *1000.0f) / ((float)SystemCoreClock);
+    float actual_delay_ms = ((float)timer_count) / ((float)SystemCoreClock);
 
     // Create a buffer to hold the entire formatted string
     char task_list[1024];

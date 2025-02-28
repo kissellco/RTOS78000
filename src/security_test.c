@@ -62,11 +62,20 @@ void stackOverflowTask_vMainTask(void *pvParameters) {
 /**
  * @brief Initialise the malloc failure test task
  */
+void mallocFailTask_Init(void) {
+    printf("[Stack Test] Task initialising...\n");
+}
+
+/**
+ * @brief Test task that causes malloc failure
+ * @details This task intentionally causes a malloc failure by
+ * recursively filling the heap with chunks.
+ */
 void mallocFailTask_vMainTask(void *pvParameters) {
     printf("[Malloc Test] Task started. This will exhaust the heap...\n");
     
     // Use static array instead of stack array to avoid stack overflow
-    static void *ptrArray[250]; // Reduced size, static allocation
+    static void *ptrArray[1000]; // Reduced size, static allocation
     int allocCount = 0;   // Number of successful allocations
     
     printf("[Malloc Test] Starting memory allocations...\n");
