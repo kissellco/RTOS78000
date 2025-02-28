@@ -26,4 +26,7 @@
  Source/include/deprecated_definitions.h \
  Source/portable/GCC/ARM_CM4F/portmacro.h Source/include/mpu_wrappers.h \
  Source/include/task.h Source/include/list.h Source/include/timers.h \
- Source/include/task.h Source/include/stack_macros.h
+ Source/include/task.h Source/include/stack_macros.h \
+ /usr/include/newlib/stdio.h \
+ /usr/lib/gcc/arm-none-eabi/13.2.1/include/stdarg.h \
+ /usr/include/newlib/sys/stdio.h

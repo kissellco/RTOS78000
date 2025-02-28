@@ -56,7 +56,6 @@ void vApplicationDaemonTaskStartupHook(void)
     int base_delay = SystemCoreClock/10; // Calculate base delay (1000ms worth of cycles)
     int random_factor = (random_value % 200) * -1; // Use random value to generate number between 0 and 200
     int delay_cycles = base_delay + (base_delay * random_factor / 1000); // Calculate final delay (between 80% and 100% of base_delay)
-    float expected_delay_ms = (float)delay_cycles / (SystemCoreClock / 1000); // Estimate actual time taken to boot
 
     // Measure boot delay
     mxc_tmr_cfg_t tmr_cfg;
@@ -71,9 +70,9 @@ void vApplicationDaemonTaskStartupHook(void)
     MXC_TMR_Start(MXC_TMR0);
 
     // Security delay on boot to prevent bruteforce attacks
-    printf("Initialising secure boot process\n\n");
+    printf("Initialising hardened boot process\n\n");
     for (volatile int i = 0; i < delay_cycles; i++) {
-        if (i % (delay_cycles/50) == 0) {
+        if (i % (delay_cycles/10) == 0) {
             printf(".");
         }
     }
@@ -91,9 +90,9 @@ void vApplicationDaemonTaskStartupHook(void)
     printf("*            Boot Sequence Completed            *\n");
     printf("*            G'day from Team Flinders           *\n");
     printf("*          MAX78000 powered by FreeRTOS         *\n");
-    printf("*                     (%s)                   *\n", tskKERNEL_VERSION_NUMBER);
+    printf("*                     %s                   *\n", tskKERNEL_VERSION_NUMBER);
     printf("*************************************************\n");
-    printf("System Clock = %d MHz\n\n", (SystemCoreClock * 0.000001));
+    printf("System Clock = %d MHz\n\n", (SystemCoreClock / 100000));
     
     /* Display boot timing information */
     printf("Security delay: %.2f ms\n\n", actual_delay_ms);
@@ -104,12 +103,19 @@ void vApplicationDaemonTaskStartupHook(void)
     printf("  Free Heap: %d bytes\n", xPortGetFreeHeapSize());
     printf("  Minimum Ever Free Heap: %d bytes\n", xPortGetMinimumEverFreeHeapSize());
     printf("  Number of Tasks: %d\n\n", uxTaskGetNumberOfTasks());
+
+    printf("  Running Tasks: \n\n");
+    char task_list[1024];
+    vTaskList(task_list);
+    printf("Task Name       State   Prio    Stack   Task#\n");
+    printf("---------------------------------------------\n");
+    printf("%s\n", task_list);
     
     /* Indicate successful boot with a green LED */
     LED_Off(LED_RED);
     LED_On(LED_GREEN);
     
-    printf("System initialisation complete! \n Running tasks...\n\n");
+    printf("System initialisation complete! \nRunning tasks...\n\n");
 }
 
 /* Static memory for idle task */

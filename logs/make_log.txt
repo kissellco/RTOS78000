@@ -12,20 +12,14 @@ make[1]: Nothing to be done for 'lib'.
 make[1]: Leaving directory '/home/rhys/msdk/Libraries/FreeRTOS'
 - CC src/FreeRTOS_hooks.c
 src/FreeRTOS_hooks.c: In function 'vApplicationDaemonTaskStartupHook':
-src/FreeRTOS_hooks.c:98:58: warning: implicit conversion from 'float' to 'double' when passing argument to function [-Wdouble-promotion]
-   98 |     printf("System Clock = %d MHz\n\n", (SystemCoreClock * 0.000001));
-      |                                         ~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-src/FreeRTOS_hooks.c:101:61: warning: implicit conversion from 'float' to 'double' when passing argument to function [-Wdouble-promotion]
-  101 |     printf("Security delay: %.2f ms (target: %.2f ms)\n\n", actual_delay_ms, expected_delay_ms);
-      |                                                             ^~~~~~~~~~~~~~~
-src/FreeRTOS_hooks.c:101:78: warning: implicit conversion from 'float' to 'double' when passing argument to function [-Wdouble-promotion]
-  101 |     printf("Security delay: %.2f ms (target: %.2f ms)\n\n", actual_delay_ms, expected_delay_ms);
-      |                                                                              ^~~~~~~~~~~~~~~~~
+src/FreeRTOS_hooks.c:98:43: warning: implicit conversion from 'float' to 'double' when passing argument to function [-Wdouble-promotion]
+   98 |     printf("Security delay: %.2f ms\n\n", actual_delay_ms);
+      |                                           ^~~~~~~~~~~~~~~
 - LD /home/rhys/freeRTOS78000/build/max78000.elf
 Memory region         Used Size  Region Size  %age Used
              ROM:           0 B        64 KB      0.00%
-           FLASH:       75008 B       512 KB     14.31%
-            SRAM:       32700 B       128 KB     24.95%
+           FLASH:       81664 B       512 KB     15.58%
+            SRAM:       32724 B       128 KB     24.97%
 arm-none-eabi-size --format=berkeley /home/rhys/freeRTOS78000/build/max78000.elf
    text	   data	    bss	    dec	    hex	filename
-  72812	   1840	  31216	 105868	  19d8c	/home/rhys/freeRTOS78000/build/max78000.elf
+  79356	   1840	  31352	 112548	  1b7a4	/home/rhys/freeRTOS78000/build/max78000.elf

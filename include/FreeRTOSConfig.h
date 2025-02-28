@@ -14,6 +14,10 @@
 #define configRTC_TICK_RATE_HZ                                      (32768) //Set to realtime clock oscillator
 #define configTICK_RATE_HZ                                          ((portTickType)1000) // Improves time resolution
 
+// Diagnostics
+#define configUSE_TRACE_FACILITY                                    1
+#define configUSE_STATS_FORMATTING_FUNCTIONS                        1
+
 // Scheduler
 #define configMAX_PRIORITIES                                        5
 #define configMINIMAL_STACK_SIZE                                    ((uint16_t)128)
