@@ -84,6 +84,7 @@ void vApplicationDaemonTaskStartupHook(void) {
 
     // Create a buffer to hold the entire formatted string
     char message[2048];  // Adjust size based on the expected output length
+    char task_list[512];
     vTaskList(task_list);
 
     // Build the message in the buffer using snprintf
