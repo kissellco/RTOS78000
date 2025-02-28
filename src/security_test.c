@@ -33,10 +33,7 @@ void stackOverflowTask_Init(void) {
  */
 void stackOverflowTask_vMainTask(void *pvParameters) {
     printf("[Stack Test] Task started. This will cause a stack overflow...\n");
-    
-    // Wait a moment to ensure message is printed
-    vTaskDelay(pdMS_TO_TICKS(1000));
-    
+
     // Function to cause a stack overflow through recursion
     void recursiveFunction(int depth) {
         // Large local array to consume stack
@@ -48,8 +45,6 @@ void stackOverflowTask_vMainTask(void *pvParameters) {
         // Print depth occasionally to show progress
         if (depth % 5 == 0) {
             printf("[Stack Test] Recursion depth: %d\n", depth);
-            // Small delay to allow output to appear
-            vTaskDelay(pdMS_TO_TICKS(10));
         }
         
         // Recurse infinitely, consuming more stack each time
@@ -62,7 +57,6 @@ void stackOverflowTask_vMainTask(void *pvParameters) {
     
     // This point should never be reached
     printf("[Stack Test] Task ending (this should never be printed)\n");
-    vTaskDelete(NULL);
 }
 
 /**
@@ -80,18 +74,15 @@ void mallocFailTask_Init(void) {
 void mallocFailTask_vMainTask(void *pvParameters) {
     printf("[Malloc Test] Task started. This will exhaust the heap...\n");
     
-    // Wait a moment to ensure message is printed
-    vTaskDelay(pdMS_TO_TICKS(1000));
-    
     // Keep track of allocations
-    void *ptrArray[1000]; // Pointers to allocated memory
+    void *ptrArray[512]; // Pointers to allocated memory
     int allocCount = 0;   // Number of successful allocations
     
     printf("[Malloc Test] Starting memory allocations...\n");
     printf("[Malloc Test] Initial free heap: %d bytes\n", xPortGetFreeHeapSize());
     
     // Allocate memory in chunks until failure
-    size_t chunkSize = 1024; // 1KB chunks
+    size_t chunkSize = 512; // 1KB chunks
     while (1) {
         // Try to allocate a chunk of memory
         void *ptr = pvPortMalloc(chunkSize);
@@ -125,12 +116,9 @@ void mallocFailTask_vMainTask(void *pvParameters) {
         if (allocCount % 5 == 0) {
             printf("[Malloc Test] Allocated %d chunks (%d bytes), free heap: %d bytes\n", 
                     allocCount, allocCount * chunkSize, xPortGetFreeHeapSize());
-            // Small delay to allow output to appear
-            vTaskDelay(pdMS_TO_TICKS(10));
         }
     }
     
     // This point should never be reached
     printf("[Malloc Test] Task ending (this should never be printed)\n");
-    vTaskDelete(NULL);
 }

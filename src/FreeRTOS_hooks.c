@@ -19,12 +19,12 @@ uint8_t ucHeap[configTOTAL_HEAP_SIZE];
 void vApplicationMallocFailedHook(void)
 {
     /* Log the failure */
-    printf("[FATAL] Memory allocation failed! System halted. Please reboot.\n");
+    printf("[FATAL] Memory allocation failed! System now in failsafe mode. Reboot the device.\n");
     
     /* Visual indication - rapidly flash red LED */
     while (1) {
-        LED_Toggle(LED_RED);
-        MXC_Delay(MXC_DELAY_MSEC(100));
+        LED_Toggle(LED2);
+        MXC_Delay(MXC_DELAY_MSEC(500));
     }
 }
 
@@ -32,10 +32,10 @@ void vApplicationMallocFailedHook(void)
 void vApplicationStackOverflowHook(TaskHandle_t pxTask, char *pcTaskName)
 {
     /* Log the stack overflow */
-    printf("[FATAL] Stack overflow in task %s! System halted. Please reboot.\n", pcTaskName);
+    printf("[FATAL] Stack overflow in task %s! System now in failsafe mode. Reboot the device.\n", pcTaskName);
     
     /* Visual indication - solid red LED */
-    LED_On(LED_RED);
+    LED_On(LED1);
     
     /* Prevent further execution */
     while (1) {
@@ -45,16 +45,8 @@ void vApplicationStackOverflowHook(TaskHandle_t pxTask, char *pcTaskName)
 
 /* Called when a daemon task is created */
 void vApplicationDaemonTaskStartupHook(void) {
-    // Initialize peripherals for timers and system status indication
+    // Initialize true random number generator for delay timer
     MXC_TRNG_Init();
-    LED_Init();
-
-    // Security delay on boot
-    uint8_t random_value;
-    MXC_TRNG_Random(&random_value, sizeof(random_value));
-    int base_delay = SystemCoreClock / 10;
-    int random_factor = (random_value % 100);
-    int delay_cycles = base_delay - (base_delay * random_factor / 1000);  // Calculate final delay (between 80% and 100% of base_delay)
 
     // Measure boot delay
     mxc_tmr_cfg_t tmr_cfg;
@@ -68,9 +60,16 @@ void vApplicationDaemonTaskStartupHook(void) {
     MXC_TMR_SetCount(MXC_TMR0, 0);
     MXC_TMR_Start(MXC_TMR0);
 
+    // Security delay on boot
+    uint8_t random_value;
+    MXC_TRNG_Random(&random_value, sizeof(random_value));
+    int base_delay = SystemCoreClock / 40;
+    int random_factor = (random_value % 100);
+    int delay_cycles = base_delay - (base_delay * random_factor / 1000);  // Calculate final delay (between 80% and 100% of base_delay)
+
     // Security delay on boot to prevent bruteforce attacks
     for (volatile int i = 0; i < delay_cycles; i++) {
-        if (i % (delay_cycles / 25) == 0) {
+        if (i % (delay_cycles / 10) == 0) {
             printf(".");
         }
     }
@@ -80,7 +79,7 @@ void vApplicationDaemonTaskStartupHook(void) {
     uint32_t timer_count = MXC_TMR_GetCount(MXC_TMR0);
 
     // Calculate actual delay in milliseconds
-    float actual_delay_ms = (float)timer_count / (SystemCoreClock / 1000);
+    float actual_delay_ms = ((float)timer_count *1000.0f) / ((float)SystemCoreClock);
 
     // Create a buffer to hold the entire formatted string
     char task_list[1024];
@@ -103,7 +102,7 @@ void vApplicationDaemonTaskStartupHook(void) {
              "  Number of Tasks: %d\n\n",
              tskKERNEL_VERSION_NUMBER,          // Version string
              configTICK_RATE_HZ,                // Tick rate
-             actual_delay_ms,                      // Security delay
+             actual_delay_ms,                   // Security delay
              configTOTAL_HEAP_SIZE,             // Total heap size
              xPortGetFreeHeapSize(),            // Free heap
              xPortGetMinimumEverFreeHeapSize(), // Min free heap
@@ -118,6 +117,7 @@ void vApplicationDaemonTaskStartupHook(void) {
     );
 
     // Indicate successful boot with a green LED
+    LED_Init();
     LED_Off(LED_RED);
     LED_On(LED_GREEN);
 }

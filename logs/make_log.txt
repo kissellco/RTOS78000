@@ -13,8 +13,8 @@ make[1]: Leaving directory '/home/rhys/msdk/Libraries/FreeRTOS'
 - LD /home/rhys/freeRTOS78000/build/max78000.elf
 Memory region         Used Size  Region Size  %age Used
              ROM:           0 B        64 KB      0.00%
-           FLASH:       81408 B       512 KB     15.53%
-            SRAM:       32732 B       128 KB     24.97%
+           FLASH:       82176 B       512 KB     15.67%
+            SRAM:       33244 B       128 KB     25.36%
 arm-none-eabi-size --format=berkeley /home/rhys/freeRTOS78000/build/max78000.elf
    text	   data	    bss	    dec	    hex	filename
-  79172	   1848	  31272	 112292	  1b6a4	/home/rhys/freeRTOS78000/build/max78000.elf
+  80052	   1848	  31672	 113572	  1bba4	/home/rhys/freeRTOS78000/build/max78000.elf
