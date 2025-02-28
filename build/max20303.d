@@ -1,6 +1,12 @@
 /home/rhys/freeRTOS78000/build/max20303.o: src/max20303.c \
- /usr/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
- /usr/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h \
+ /home/rhys/msdk/Tools/GNUTools/10.3/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+ /home/rhys/msdk/Tools/GNUTools/10.3/arm-none-eabi/include/stdint.h \
+ /home/rhys/msdk/Tools/GNUTools/10.3/arm-none-eabi/include/machine/_default_types.h \
+ /home/rhys/msdk/Tools/GNUTools/10.3/arm-none-eabi/include/sys/features.h \
+ /home/rhys/msdk/Tools/GNUTools/10.3/arm-none-eabi/include/_newlib_version.h \
+ /home/rhys/msdk/Tools/GNUTools/10.3/arm-none-eabi/include/sys/_intsup.h \
+ /home/rhys/msdk/Tools/GNUTools/10.3/arm-none-eabi/include/sys/_stdint.h \
+ /home/rhys/msdk/Tools/GNUTools/10.3/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_device.h \
  /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Include/max78000.h \
  /home/rhys/msdk/Libraries/CMSIS/5.9.0/Core/Include/core_cm4.h \
@@ -16,7 +22,7 @@
  /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Include/gpio_regs.h \
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_delay.h \
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/i2c.h \
- /usr/lib/gcc/arm-none-eabi/13.2.1/include/stdbool.h \
+ /home/rhys/msdk/Tools/GNUTools/10.3/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_sys.h \
  /home/rhys/msdk/Libraries/PeriphDrivers/Include/MAX78000/mxc_device.h \
  /home/rhys/msdk/Libraries/CMSIS/Device/Maxim/MAX78000/Include/lpgcr_regs.h \

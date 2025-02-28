@@ -10,6 +10,11 @@ make -C /home/rhys/msdk/Libraries/FreeRTOS/ lib BUILD_DIR=/home/rhys/freeRTOS780
 make[1]: Entering directory '/home/rhys/msdk/Libraries/FreeRTOS'
 make[1]: Nothing to be done for 'lib'.
 make[1]: Leaving directory '/home/rhys/msdk/Libraries/FreeRTOS'
+- LD /home/rhys/freeRTOS78000/build/max78000.elf
+Memory region         Used Size  Region Size  %age Used
+             ROM:           0 B        64 KB      0.00%
+           FLASH:       75008 B       512 KB     14.31%
+            SRAM:       32196 B       128 KB     24.56%
 arm-none-eabi-size --format=berkeley /home/rhys/freeRTOS78000/build/max78000.elf
    text	   data	    bss	    dec	    hex	filename
-  72924	   1840	  30856	 105620	  19c94	/home/rhys/freeRTOS78000/build/max78000.elf
+  72756	   1840	  30768	 105364	  19b94	/home/rhys/freeRTOS78000/build/max78000.elf
