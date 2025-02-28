@@ -85,7 +85,9 @@ void mallocFailTask_vMainTask(void *pvParameters) {
             
             // The next allocation will trigger the MallocFailedHook
             printf("[Malloc Test] Triggering MallocFailedHook...\n");
-            void *finalPtr = pvPortMalloc(64); // Small allocation to trigger the hook
+            // Prevent compiler warning by using the result of pvPortMalloc
+            volatile void *finalPtr = pvPortMalloc(64); // Small allocation to trigger the hook
+            (void)finalPtr; // Further silences compiler warnings
             
             // This point should never be reached
             printf("[Malloc Test] Still running (this should never be printed)\n");
