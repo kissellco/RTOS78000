@@ -23,6 +23,7 @@
  * @brief       FreeRTOS Example Application.
  */
 
+// C inclusions
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
@@ -44,6 +45,9 @@
 #include "led.h"
 #include "trng.h"
 #include "tmr.h"
+
+// Team Flinders custom inclusions
+#include "security_test.h"
 
 
 /* Explicitly disable tickless mode */
@@ -135,6 +139,31 @@ int main(void)
 
     // Continue with the rest of your code
     printf("Creating tasks...\n");
+
+    /* 
+     * IMPORTANT: These tasks are for testing purposes only!
+     * Comment in the one you want to test.
+     */
+    
+    /* Stack Overflow Test Task - uncomment to test */
+    /*
+    stackOverflowTask_Init();
+    if (xTaskCreate(stackOverflowTask_vMainTask, "StackTest", STACK_OVERFLOW_TASK_STACK_SIZE,
+                    NULL, tskIDLE_PRIORITY + 1, NULL) != pdPASS) {
+        printf("xTaskCreate() failed to create Stack Test task.\n");
+        while(1) { __NOP(); }
+    }
+    */
+    
+    /* Malloc Fail Test Task - uncomment to test */
+    /*
+    mallocFailTask_Init();
+    if (xTaskCreate(mallocFailTask_vMainTask, "MallocTest", MALLOC_FAIL_TASK_STACK_SIZE,
+                    NULL, tskIDLE_PRIORITY + 1, NULL) != pdPASS) {
+        printf("xTaskCreate() failed to create Malloc Test task.\n");
+        while(1) { __NOP(); }
+    }
+    */
     
 
     /* Create the TickTock task */
