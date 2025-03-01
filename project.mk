@@ -26,11 +26,25 @@ MXC_OPTIMIZE_CFLAGS = -Og
 # ^ For example, you can uncomment this line to 
 # optimize the project for debugging
 
+# ****************** eCTF Bootloader *******************
+# DO NOT REMOVE
+LINKERFILE  = firmware.ld
+STARTUPFILE = startup_firmware.S
+ENTRY       = firmware_startup
+ 
+BINS += secrets.S
+ 
+# Set assembler flag if development build
+# - Uses different global secrets location
+ifeq ($(DEV_BUILD),1) 
+	PROJ_AFLAGS+=-DDEV_BUILD
+endif
+
 # **********************************************************
 # Custom config goes here.
-MAXIM_PATH = 			/home/rhys/msdk
-DEBUG = 				1
-LIB_FREERTOS = 			1
-RTOS_CONFIG_DIR = 		include
-FREERTOS_HEAP_TYPE := 	4
+MAXIM_PATH          = /home/rhys/msdk
+DEBUG               = 1
+LIB_FREERTOS        = 1
+RTOS_CONFIG_DIR     = include
+FREERTOS_HEAP_TYPE := 4
 export FREERTOS_HEAP_TYPE
