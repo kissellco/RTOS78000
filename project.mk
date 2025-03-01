@@ -42,6 +42,15 @@ endif
 
 # **********************************************************
 # Custom config goes here.
+
+# Where to find source files for this project
+VPATH += src
+VPATH += lib
+
+# Where to find header files for this project
+IPATH += include
+IPATH += lib
+
 MAXIM_PATH          = /home/rhys/msdk
 DEBUG               = 1
 LIB_FREERTOS        = 1
