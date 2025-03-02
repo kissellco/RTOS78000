@@ -164,7 +164,7 @@ void serialInterfaceManager_vMainTask(void *pvParameters){
                 res = _listChannels();
                 if(res != 0){
                     STATUS_LED_RED();
-                    host_print_error("Decode Failed\n");
+                    host_print_error("List Channels Failed\n");
                 }
                 break;
 
@@ -182,10 +182,10 @@ void serialInterfaceManager_vMainTask(void *pvParameters){
             case SUBSCRIBE_MSG:
                 STATUS_LED_YELLOW();
                 res = _subscriptionUpdate(uart_RxBuff, pkt_len);
-                if(res != 0){
-                    STATUS_LED_RED();
-                    host_print_error("Subscription Update Failed\n");
-                }
+                // if(res != 0){
+                //     STATUS_LED_RED();
+                //     host_print_error("Subscription Update Failed\n");
+                // }
                 break;
 
             // Handle bad command

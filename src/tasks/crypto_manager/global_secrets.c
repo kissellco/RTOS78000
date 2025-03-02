@@ -24,7 +24,7 @@
 
 /******************************** PRIVATE TYPES ********************************/
 typedef struct __attribute__((packed)) {
-    uint16_t channel;
+    channel_id_t channel;
     uint8_t pKey[CHANNEL_KDF_KEY_LEN];
 } channel_key_pair_t;
 
@@ -35,7 +35,7 @@ extern const uint8_t secrets_bin_end[];
 
 /******************************** PRIVATE VARIABLES ********************************/
 static uint8_t _globalSecretsValid = 0;
-static uint16_t _numChannels = 0;
+static size_t _numChannels = 0;
 
 /******************************** PRIVATE FUNCTION DECLARATIONS ********************************/
 /** @brief Calculated how long the global secrets should be 
@@ -45,7 +45,7 @@ static uint16_t _numChannels = 0;
  * 
  * @return Expected length of the global secrets given that it contains "numChannels" channels
 */
-static uint32_t _num_channels_to_length(const uint16_t numChannels){
+static uint32_t _num_channels_to_length(const size_t numChannels){
     return SUBSCRIPTION_KDF_KEY_LEN + SUBSCRIPTION_CIPHER_AUTH_TAG_LEN + FRAME_KDF_KEY_LEN + CHANNEL_NUM_LEN + numChannels*(CHANNEL_LEN + CHANNEL_KDF_KEY_LEN);
 }
 
@@ -67,7 +67,7 @@ static int _find_channel_info(
 
     // Loop through all the channel key pairs to see if the channel exists
     for(size_t i = 0; i < _numChannels; i++){
-        uint16_t foundChannel = *(uint16_t*)(secrets_bin_start + CHANNEL_INFO_OFFSET + i*CHANNEL_LEN);
+        channel_id_t foundChannel = *(channel_id_t*)(secrets_bin_start + CHANNEL_INFO_OFFSET + i*CHANNEL_LEN);
         if(channel == foundChannel){
             *ppKey = secrets_bin_start + CHANNEL_INFO_OFFSET + _numChannels*CHANNEL_LEN + i*CHANNEL_KDF_KEY_LEN;
             return 0;
@@ -144,13 +144,6 @@ int secrets_init(void){
     // Check length is good based on number of channels in deployment
     _numChannels = *(uint16_t*)(pSecretsBin + NUM_CHANNELS_OFFSET);
     // printf("-{I} Detected %u Channels in Deployment\n", _numChannels);
-
-    if(_numChannels > MAX_CHANNEL_COUNT){
-        // printf("-{E} Too Many Channels in Deployment, Max %u but Found %u!!\n", MAX_CHANNEL_COUNT, _numChannels);
-        // printf("-ERROR\n\n");
-        return 1;
-    }
-    // printf("-{I} Found %u Channels in Deployment, Less Than the Max of %u :)\n", _numChannels, MAX_CHANNEL_COUNT);
 
     const uint32_t expectedLen = _num_channels_to_length(_numChannels);
     if(expectedLen != secretsLen){
@@ -264,7 +257,7 @@ int secrets_get_channel_kdf_key(const channel_id_t channel, const uint8_t **ppKe
 */
 int secrets_get_channel_info(
     const size_t idx, 
-    uint16_t const **ppChannel, const uint8_t **ppKey
+    channel_id_t const **ppChannel, const uint8_t **ppKey
 ){
     // Ensure secrets are valid
     if(_globalSecretsValid == 0){
@@ -276,7 +269,7 @@ int secrets_get_channel_info(
         return 1;
     }
 
-    *ppChannel = (uint16_t*)(secrets_bin_start + CHANNEL_INFO_OFFSET + idx*CHANNEL_LEN);
+    *ppChannel = (channel_id_t*)(secrets_bin_start + CHANNEL_INFO_OFFSET + idx*CHANNEL_LEN);
     *ppKey = secrets_bin_start + CHANNEL_INFO_OFFSET + _numChannels*CHANNEL_LEN + idx*CHANNEL_KDF_KEY_LEN;
     return 0;
 }

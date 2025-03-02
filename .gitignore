@@ -1,0 +1,11 @@
+# Ignore build objects
+/build/
+
+# Ignore binaries
+*.bin
+
+# Ignore secrets
+global.secrets
+
+# Ignore venv
+.venv

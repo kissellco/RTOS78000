@@ -11,6 +11,7 @@
 #include "led.h"
 #include "trng.h"
 #include "tmr.h"
+#include "failsafe.h"
 
 /* Required for heap_4.c */
 uint8_t ucHeap[configTOTAL_HEAP_SIZE];
@@ -19,28 +20,16 @@ uint8_t ucHeap[configTOTAL_HEAP_SIZE];
 void vApplicationMallocFailedHook(void)
 {
     /* Log the failure */
-    printf("[FATAL] Memory allocation failed! System now in failsafe mode. Reboot the device.\n");
-    
-    /* Visual indication - rapidly flash red LED */
-    while (1) {
-        LED_Toggle(LED2);
-        MXC_Delay(MXC_DELAY_MSEC(500));
-    }
+    char mallocMessage[127] = "Memory allocation failed! System attempting to reset. \n";
+    system_reset(mallocMessage);
 }
 
 /* Called if stack overflow is detected during context switch */
 void vApplicationStackOverflowHook(TaskHandle_t pxTask, char *pcTaskName)
 {
     /* Log the stack overflow */
-    printf("[FATAL] Stack overflow in task %s! System now in failsafe mode. Reboot the device.\n", pcTaskName);
-    
-    /* Visual indication - solid red LED */
-    LED_On(LED1);
-    
-    /* Prevent further execution */
-    while (1) {
-        __NOP();
-    }
+    char stackMessage[127] = "Stack overflow! System attempting to reset.\n";
+    system_reset(stackMessage);
 }
 
 /* Called when a daemon task is created */

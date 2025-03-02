@@ -13,7 +13,7 @@
 
 //----- Private Constants -----//
 #define FRAME_KDF_DATA_LENGTH 32
-#define FRAME_KDF_CHANNEL_KEY_LEN 20
+#define FRAME_KDF_CHANNEL_KEY_LEN 18
 #define FRAME_KDF_CHANNEL_KEY_OFFSET (CHANNEL_KDF_KEY_LEN - FRAME_KDF_CHANNEL_KEY_LEN)
 
 #define CTR_NONCE_RAND_LEN 12
@@ -40,7 +40,7 @@ typedef struct __attribute__((packed)) {
     uint8_t frameDataLen;
     uint8_t channelKey[FRAME_KDF_CHANNEL_KEY_LEN];
     uint64_t timeStamp;
-    uint16_t channel;
+    channel_id_t channel;
 } frame_kdf_data_t;
 
 typedef struct __attribute__((packed)) {
@@ -85,7 +85,7 @@ static int _timestamp_CheckInc(const channel_id_t channel, const timestamp_t tim
         return 0;
     }
 
-    return -1;
+    return 1;
 }
 
 static int _timestamp_Update(channel_id_t channel, timestamp_t timestamp){
@@ -108,7 +108,7 @@ static int _timestamp_Update(channel_id_t channel, timestamp_t timestamp){
     }
 
     // No room to store the channel
-    return -1;
+    return 1;
 }
 
 static size_t _expectedPacketLen(const uint8_t frameLen){
@@ -344,7 +344,7 @@ static int _checkActiveSub(
 }
 
 static int _decodeFrame(
-    FrameManager_Decode *pFrameDecode
+    const FrameManager_Decode *pFrameDecode
 ){
     int res;
 
@@ -375,18 +375,6 @@ static int _decodeFrame(
         // );
         // printf("-FAIL [Packet]\n\n");
         // host_print_error("FrameDecode -> Frame Bad Message Length\n");
-        return 1;
-    }
-
-    // Channel is 4 bytes in the subscription update structure but max expected is 2 byte in python
-    // - Verify that the channel fits in 2 bytes to prevent undefined behaviour later on
-    if(pFramePacket->channel > 0xFFFF){
-        // STATUS_LED_RED();
-        // printf(
-        //     "-{E} Channel Number Greater than 0xFFFF!!\n"
-        // );
-        // printf("-FAIL [Channel Num]\n\n");
-        // host_print_error("FrameDecode -> Frame Channel Number too Big\n");
         return 1;
     }
 

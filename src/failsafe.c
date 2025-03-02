@@ -8,6 +8,7 @@
 #include "task.h"
 #include "led.h"
 #include "failsafe.h"
+#include <wdt.h>
 
 /**
  * @brief Enter a failsafe state when a critical error occurs
@@ -20,15 +21,17 @@
 
 void failsafe(void)
 {
-    LED_On(LED_RED);
     /* Disable all interrupts at the processor level and stop scheduler */
     __disable_irq();
     taskDISABLE_INTERRUPTS();
-    printf("System failsafe engaged. Reboot the device.
+
+    printf("System failsafe is now engaged. Please manually reboot the device.");
+
     /* Do nothing, uninterrupted, until heat death of universe */
     while (1) {
         __NOP();
     }
+
 }
 
 /**
@@ -43,27 +46,18 @@ void failsafe(void)
 void system_reset(const char *message)
 {
     /* Visual indication - set red LED on */
-    LED_On(LED_RED);
-    
+        STATUS_LED_ERROR();
+
     /* Log the error message */
     if (message != NULL) {
         printf("[FATAL] %s\n", message);
-        printf("System attempting reboot...\n Flushing buffer...\n");
+        printf("System rebooting in 5 seconds...\n");
     }
-    
-    /* Ensure all buffered data is sent */
-    fflush(stdout);
+    vTaskDelay(pdMS_TO_TICKS(5000));
 
-    /* Try to reset using watchdog */
-    mxc_wdt_cfg_t cfg;
-    cfg.mode = MXC_WDT_MODE_RESET;  /* Reset mode */
-    cfg.timeout = 1;                /* Minimal timeout */
-    MXC_WDT_Init(MXC_WDT0, &cfg);
-    MXC_WDT_Enable(MXC_WDT0);
+    /* Try to reset gracefully */
+    NVIC_SystemReset();
     
-    /* Try to reset using system reset function */
-    MXC_SYS_Reset_Periph(MXC_SYS_RESET_SYSTEM);
-    
-    /* If we get here, both reset methods failed, enter failsafe mode */
-    enter_failsafe();
+    /* If reset fails, enter failsafe mode */
+    failsafe();
 }

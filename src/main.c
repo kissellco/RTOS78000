@@ -48,8 +48,11 @@
 
 // Team Flinders custom inclusions
 #include "security_test.h"
+#include "failsafe.h"
 
-
+/* =================================================================
+Configuration items 
+================================================================= */
 /* Explicitly disable tickless mode */
 unsigned int disable_tickless = 1;
 
@@ -57,9 +60,21 @@ unsigned int disable_tickless = 1;
 #define STRING(x) STRING_(x)
 #define STRING_(x) #x
 
+/* =================================================================
+Task Setup 
+================================================================= */
+/* Task IDs */
+TaskHandle_t crypto_manager_task_id;
+TaskHandle_t subscription_manager_task_id;
+TaskHandle_t serial_interface_manager_task_id;
+TaskHandle_t channel_manager_task_id;
+TaskHandle_t frame_manager_task_id;
+
+
+
 /* =| vTickTockTask |============================================
  *
- * This task writes the current RTOS tick time to the console
+ * This task is only used to monitor signs of life on device.
  *
  * =======================================================
  */
@@ -73,11 +88,9 @@ void vTickTockTask(void *pvParameters)
 
     while (1) {
         ticks = xTaskGetTickCount();
-        printf("Uptime is 0x%08x (%u seconds), tickless-idle is %s\n", 
-               (unsigned int)ticks, 
-               (unsigned int)(ticks / configTICK_RATE_HZ),
-               disable_tickless ? "disabled" : "enabled");
-        
+        printf("System live: uptime is %u\n", 
+               (unsigned int)(ticks / configTICK_RATE_HZ)
+            );
         vTaskDelayUntil(&xLastWakeTime, (configTICK_RATE_HZ * 5));
     }
 }
@@ -88,6 +101,7 @@ void vTickTockTask(void *pvParameters)
 int main(void)
 {
     Board_Init();
+    LED_Init();
 
     printf("Creating tasks...\n");
 
@@ -106,14 +120,14 @@ int main(void)
     */
     
     /* Malloc Fail Test Task - uncomment to test */
-    
+/*     
     mallocFailTask_Init();
     if (xTaskCreate(mallocFailTask_vMainTask, "MallocTest", MALLOC_FAIL_TASK_STACK_SIZE,
                     NULL, tskIDLE_PRIORITY + 1, NULL) != pdPASS) {
         printf("xTaskCreate() failed to create Malloc Test task.\n");
         while(1) { __NOP(); }
     }
-   
+    */
      
 
     /* Create the TickTock task */
@@ -128,10 +142,8 @@ int main(void)
     vTaskStartScheduler();
 
     /* This code is only reached if the scheduler failed to start */
-    printf("ERROR: FreeRTOS scheduler failed to start!\n");
-    while (1) {
-        __NOP();
-    }
+    printf("FreeRTOS scheduler failed to start! Activating failsafe...\n");
+    failsafe();
     
     return -1;
 }
